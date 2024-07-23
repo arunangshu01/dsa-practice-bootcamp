@@ -47,7 +47,12 @@ class SingleLinkedList:
         return
 
     def insert_at_any_position(self, index, value):
-        if index < 0:
+        new_node = SingleNode(value)
+        if self.length == 0 or (not self.head and not self.tail):
+            self.head = self.tail = new_node
+            self.length += 1
+            return
+        elif index < 0:
             raise IndexError("Index is less than 0.")
         elif index > self.length + 1:
             raise IndexError("Index is out of bounds")
@@ -56,7 +61,6 @@ class SingleLinkedList:
         elif index == self.length:
             self.insert_at_the_end(value)
         else:
-            new_node = SingleNode(value)
             current_node = self.head
             for _ in range(index - 1):
                 current_node = current_node.next
@@ -72,7 +76,7 @@ class SingleLinkedList:
             current_node = current_node.next
 
     def search_in_the_linked_list_by_index(self, index):
-        if self.length == 0:
+        if self.length == 0 or (not self.head and not self.tail):
             raise Exception("The Linked List is empty.")
         elif index < -1:
             raise Exception("Index is less than 0.")
@@ -86,13 +90,13 @@ class SingleLinkedList:
             return searched_node.value, index
         else:
             searched_node, i = self.head, 0
-            while i <= index:
+            while i < index:
                 searched_node = searched_node.next
                 i += 1
             return searched_node.value, i
 
     def search_in_the_linked_list_by_value(self, value):
-        if self.length == 0:
+        if self.length == 0 or (not self.head and not self.tail):
             raise Exception("The Linked List is empty.")
         else:
             searched_node, index = self.head, 0
@@ -158,6 +162,11 @@ class SingleLinkedList:
     def delete_from_anywhere(self, index):
         if self.length == 0 or (not self.head and not self.tail):
             raise Exception("There is no element in the Linked List.")
+        elif self.length == 1:
+            popped_node = self.head
+            self.head = self.tail = None
+            self.length -= 1
+            return popped_node
         elif index < -1:
             raise Exception("Index is less than 0.")
         elif index >= self.length:
@@ -174,7 +183,7 @@ class SingleLinkedList:
             self.length -= 1
             return popped_node
 
-    def delete_all(self):
+    def delete_all_nodes(self):
         self.head = None
         self.tail = None
         self.length = 0
@@ -216,7 +225,7 @@ if __name__ == '__main__':
         print(single_linked_list)
         print(single_linked_list.delete_from_anywhere(10))
         print(single_linked_list)
-        single_linked_list.delete_all()
+        single_linked_list.delete_all_nodes()
         print(single_linked_list.delete_from_anywhere(0))
 
     except Exception as e:
