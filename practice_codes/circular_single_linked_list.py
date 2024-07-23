@@ -159,5 +159,3 @@ if __name__ == '__main__':
         print(circular_single_linked_list.search_in_the_linked_list_by_value(100))
     except Exception as e:
         print(e.__str__())
-
-
