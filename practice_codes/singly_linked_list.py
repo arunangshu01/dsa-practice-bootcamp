@@ -218,6 +218,6 @@ if __name__ == '__main__':
         print(single_linked_list)
         single_linked_list.delete_all()
         print(single_linked_list.delete_from_anywhere(0))
-        
+
     except Exception as e:
         print(e.__str__())
