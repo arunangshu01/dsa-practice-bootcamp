@@ -115,16 +115,16 @@ class SingleLinkedList:
         elif index >= self.length:
             raise Exception("Index is out of bounds.")
         elif index == 0:
-            current_node = self.head
-            return current_node
+            fetched_node = self.head
+            return fetched_node
         elif index == (self.length - 1) or index < -1:
-            current_node = self.tail
-            return current_node
+            fetched_node = self.tail
+            return fetched_node
         else:
-            current_node = self.head
+            fetched_node = self.head
             for _ in range(index):
-                current_node = current_node.next
-            return current_node
+                fetched_node = fetched_node.next
+            return fetched_node
 
     def set_node(self, index, value):
         node_to_set = self.get_node(index)
@@ -193,40 +193,40 @@ if __name__ == '__main__':
     try:
         single_linked_list = SingleLinkedList()
 
-        single_linked_list.insert_at_the_beginning(10)
-        single_linked_list.insert_at_the_beginning(20)
-        single_linked_list.insert_at_the_beginning(30)
-        single_linked_list.insert_at_the_beginning(40)
+        single_linked_list.insert_at_the_beginning(value=10)
+        single_linked_list.insert_at_the_beginning(value=20)
+        single_linked_list.insert_at_the_beginning(value=30)
+        single_linked_list.insert_at_the_beginning(value=40)
 
-        single_linked_list.insert_at_the_end(50)
-        single_linked_list.insert_at_the_end(60)
-        single_linked_list.insert_at_the_end(70)
-        single_linked_list.insert_at_the_end(80)
+        single_linked_list.insert_at_the_end(value=50)
+        single_linked_list.insert_at_the_end(value=60)
+        single_linked_list.insert_at_the_end(value=70)
+        single_linked_list.insert_at_the_end(value=80)
 
-        single_linked_list.insert_at_any_position(0, 90)
-        single_linked_list.insert_at_any_position(1, 100)
-        single_linked_list.insert_at_any_position(7, 110)
-        single_linked_list.insert_at_any_position(10, 120)
-        single_linked_list.insert_at_any_position(12, 130)
+        single_linked_list.insert_at_any_position(index=0, value=90)
+        single_linked_list.insert_at_any_position(index=1, value=100)
+        single_linked_list.insert_at_any_position(index=7, value=110)
+        single_linked_list.insert_at_any_position(index=10, value=120)
+        single_linked_list.insert_at_any_position(index=12, value=130)
 
         print(single_linked_list)
         print(single_linked_list.traverse_the_linked_list())
-        print(single_linked_list.search_in_the_linked_list_by_index(6))
-        print(single_linked_list.search_in_the_linked_list_by_index(0))
-        print(single_linked_list.search_in_the_linked_list_by_value(40))
+        print(single_linked_list.search_in_the_linked_list_by_index(index=6))
+        print(single_linked_list.search_in_the_linked_list_by_index(index=0))
+        print(single_linked_list.search_in_the_linked_list_by_value(value=40))
         # print(single_linked_list.search_in_the_linked_list_by_value(1340))
 
-        print(single_linked_list.get_node(12))
-        single_linked_list.set_node(12, 140)
+        print(single_linked_list.get_node(index=12))
+        single_linked_list.set_node(index=12, value=140)
         print(single_linked_list)
         print(single_linked_list.delete_from_the_beginning())
         print(single_linked_list)
         print(single_linked_list.delete_from_the_end())
         print(single_linked_list)
-        print(single_linked_list.delete_from_anywhere(10))
+        print(single_linked_list.delete_from_anywhere(index=10))
         print(single_linked_list)
         single_linked_list.delete_all_nodes()
-        print(single_linked_list.delete_from_anywhere(0))
+        print(single_linked_list.delete_from_anywhere(index=0))
 
     except Exception as e:
         print(e.__str__())
