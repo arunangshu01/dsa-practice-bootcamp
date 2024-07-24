@@ -57,9 +57,9 @@ class SingleLinkedList:
         elif index > self.length + 1:
             raise IndexError("Index is out of bounds")
         elif index == 0:
-            self.insert_at_the_beginning(value)
+            self.insert_at_the_beginning(value=value)
         elif index == self.length:
-            self.insert_at_the_end(value)
+            self.insert_at_the_end(value=value)
         else:
             current_node = self.head
             for _ in range(index - 1):
@@ -176,7 +176,7 @@ class SingleLinkedList:
         elif index == (self.length - 1) or index == -1:
             return self.delete_from_the_end()
         else:
-            previous_node = self.get_node(index)
+            previous_node = self.get_node(index=(index - 1))
             popped_node = previous_node.next
             previous_node.next = popped_node.next
             popped_node.next = None
@@ -191,6 +191,7 @@ class SingleLinkedList:
 
 if __name__ == '__main__':
     try:
+
         single_linked_list = SingleLinkedList()
 
         single_linked_list.insert_at_the_beginning(value=10)
