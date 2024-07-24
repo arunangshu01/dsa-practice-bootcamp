@@ -5,7 +5,7 @@ class CircularSingleNode:
         self.next = None
 
     def __str__(self):
-        result = f"{self.value}"
+        result = str(self.value)
         return result
 
 
@@ -28,7 +28,7 @@ class CircularSingleLinkedList:
         return result
 
     def insert_at_the_beginning(self, value):
-        new_node = CircularSingleNode(value)
+        new_node = CircularSingleNode(value=value)
         if self.length == 0 or (not self.head and not self.tail):
             self.head = self.tail = new_node
             self.tail.next = self.head
@@ -40,7 +40,7 @@ class CircularSingleLinkedList:
         return
 
     def insert_at_the_end(self, value):
-        new_node = CircularSingleNode(value)
+        new_node = CircularSingleNode(value=value)
         if self.length == 0 or (not self.head and not self.tail):
             self.head = self.tail = new_node
             self.tail.next = self.head
@@ -52,7 +52,7 @@ class CircularSingleLinkedList:
         return
 
     def insert_at_anywhere(self, index, value):
-        new_node = CircularSingleNode(value)
+        new_node = CircularSingleNode(value=value)
         if self.length == 0 or (not self.head and not self.tail):
             self.head = self.tail = new_node
             self.tail.next = self.head
@@ -63,9 +63,9 @@ class CircularSingleLinkedList:
         elif index > self.length:
             raise IndexError("index is out of bounds.")
         elif index == 0:
-            self.insert_at_the_beginning(value)
+            self.insert_at_the_beginning(value=value)
         elif index == self.length:
-            self.insert_at_the_end(value)
+            self.insert_at_the_end(value=value)
         else:
             current_node = self.head
             for _ in range(index - 1):
@@ -190,7 +190,7 @@ class CircularSingleLinkedList:
             popped_node = self.delete_from_the_end()
             return popped_node
         else:
-            previous_node = self.get_node(index - 1)
+            previous_node = self.get_node(index=(index - 1))
             popped_node = previous_node.next
             previous_node.next = popped_node.next
             popped_node.next = None
@@ -203,6 +203,7 @@ class CircularSingleLinkedList:
 
 if __name__ == '__main__':
     try:
+
         circular_single_linked_list = CircularSingleLinkedList()
 
         circular_single_linked_list.insert_at_the_beginning(value=10)
@@ -256,5 +257,6 @@ if __name__ == '__main__':
         print(circular_single_linked_list)
         circular_single_linked_list.delete_all_nodes()
         print(circular_single_linked_list.delete_from_anywhere(index=5))
+
     except Exception as e:
         print(e.__str__())
