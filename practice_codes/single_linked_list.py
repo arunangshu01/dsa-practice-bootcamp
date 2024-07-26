@@ -138,7 +138,6 @@ class SingleLinkedList:
         if self.length == 1:
             self.head = self.tail = None
         else:
-            popped_node = self.head
             self.head = self.head.next
             popped_node.next = None
         self.length -= 1
@@ -184,8 +183,7 @@ class SingleLinkedList:
             return popped_node
 
     def delete_all_nodes(self):
-        self.head = None
-        self.tail = None
+        self.head = self.tail = None
         self.length = 0
 
 
