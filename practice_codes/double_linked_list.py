@@ -75,8 +75,7 @@ class DoubleLinkedList:
             searched_node = self.tail
             return searched_node.value, index
         else:
-            searched_node = self.head
-            i = 0
+            searched_node, i = self.head, 0
             while i < index:
                 searched_node = searched_node.next
                 i += 1
@@ -94,27 +93,112 @@ class DoubleLinkedList:
                 index += 1
             raise ValueError(f"The Node Value: {value} is not present in the Linked List.")
 
-    # def get_node(self, index):
-    #     current_node = self.head
-    #     for _ in range(index):
+    def get_node(self, index):
+        if self.length == 0 or (not self.head and not self.tail):
+            raise ValueError("The Linked List is empty.")
+        elif index < -1:
+            raise IndexError("Index is less than 0.")
+        elif index >= self.length:
+            raise IndexError("Index is out of bounds.")
+        elif index == 0:
+            fetched_node = self.head
+            return fetched_node
+        elif index == (self.length - 1) or index == -1:
+            fetched_node = self.tail
+            return fetched_node
+        elif 1 <= index < (self.length // 2):
+            fetched_node = self.head
+            for _ in range(index):
+                fetched_node = fetched_node.next
+            return fetched_node
+        elif (self.length // 2) <= index < (self.length - 1):
+            fetched_node = self.tail
+            for _ in range((self.length - 1), index, -1):
+                fetched_node = fetched_node.prev
+            return fetched_node
 
-    #
-    # def insert_at_anywhere(self, index, value):
-    #     new_node = DoubleNode(value=value)
-    #     if self.length == 0 or (not self.head and not self.tail):
-    #         self.head = self.tail = new_node
-    #     elif index < 0:
-    #         raise IndexError("Index is less than 0.")
-    #     elif index > self.length + 1:
-    #         raise IndexError("Index is out of bounds")
-    #     elif index == 0:
-    #         self.insert_at_the_beginning(value=value)
-    #     elif index == self.length:
-    #         self.insert_at_the_end(value=value)
-    #     else:
-    #         current_node = self.head
-    #         for _ in range(index - 1):
-    #             current_node = current_node.next
+    def set_node(self, index, value):
+        node_to_set = self.get_node(index)
+        while node_to_set:
+            node_to_set.value = value
+
+    def insert_at_anywhere(self, index, value):
+        new_node = DoubleNode(value=value)
+        if self.length == 0 or (not self.head and not self.tail):
+            self.head = self.tail = new_node
+            self.length += 1
+            return
+        elif index < 0:
+            raise IndexError("Index is less than 0.")
+        elif index > (self.length + 1):
+            raise IndexError("Index is out of bounds")
+        elif index == 0:
+            self.insert_at_the_beginning(value=value)
+        elif index == self.length:
+            self.insert_at_the_end(value=value)
+        else:
+            temp_node = self.get_node(index=(index - 1))
+            new_node.next = temp_node.next
+            new_node.prev = temp_node
+            temp_node.next.prev = new_node
+            temp_node.next = new_node
+            self.length += 1
+            return
+
+    def delete_from_the_beginning(self):
+        if self.length == 0 or (not self.head and not self.tail):
+            raise Exception("There is no element in the Linked List.")
+        popped_node = self.head
+        if self.length == 1:
+            self.head = self.tail = None
+        else:
+            self.head = self.head.next
+            self.head.prev = None
+            popped_node.next = None
+            popped_node.next = None
+        self.length -= 1
+        return popped_node
+
+    def delete_from_the_end(self):
+        if self.length == 0 or (not self.head and not self.tail):
+            raise Exception("There is no element in the Linked List.")
+        popped_node = self.tail
+        if self.length == 1:
+            self.head = self.tail = None
+        else:
+            self.tail = self.tail.prev
+            self.tail.next = None
+            popped_node.prev = None
+        self.length -= 1
+        return popped_node
+
+    def delete_from_anywhere(self, index):
+        if self.length == 0 or (not self.head and not self.tail):
+            raise Exception("There is no element in the Linked List.")
+        elif self.length == 1:
+            popped_node = self.head
+            self.head = self.tail = None
+            self.length -= 1
+            return popped_node
+        elif index < -1:
+            raise Exception("Index is less than 0.")
+        elif index >= self.length:
+            raise Exception("Index is out of bounds.")
+        elif index == 0:
+            return self.delete_from_the_beginning()
+        elif index == (self.length - 1) or index == -1:
+            return self.delete_from_the_end()
+        else:
+            popped_node = self.get_node(index=index)
+            popped_node.next.prev = popped_node.prev
+            popped_node.prev.next = popped_node.next
+            popped_node = None
+            self.length -= 1
+            return popped_node
+
+    def delete_all_nodes(self):
+        self.head = self.tail = None
+        self.length = 0
 
 
 if __name__ == '__main__':

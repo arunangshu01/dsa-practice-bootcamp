@@ -27,7 +27,7 @@ class SingleLinkedList:
         return result
 
     def insert_at_the_end(self, value):
-        new_node = SingleNode(value)
+        new_node = SingleNode(value=value)
         if self.length == 0 or (not self.head and not self.tail):
             self.head = self.tail = new_node
         else:
@@ -37,7 +37,7 @@ class SingleLinkedList:
         return
 
     def insert_at_the_beginning(self, value):
-        new_node = SingleNode(value)
+        new_node = SingleNode(value=value)
         if self.length == 0 or (not self.head and not self.tail):
             self.head = self.tail = new_node
         else:
@@ -46,8 +46,8 @@ class SingleLinkedList:
         self.length += 1
         return
 
-    def insert_at_any_position(self, index, value):
-        new_node = SingleNode(value)
+    def insert_at_anywhere(self, index, value):
+        new_node = SingleNode(value=value)
         if self.length == 0 or (not self.head and not self.tail):
             self.head = self.tail = new_node
             self.length += 1
@@ -108,7 +108,7 @@ class SingleLinkedList:
             raise ValueError(f"The Node Value: {value} is not present in the Linked List.")
 
     def get_node(self, index):
-        if self.length == 0:
+        if self.length == 0 or (not self.head and not self.tail):
             raise Exception("The Linked List is empty.")
         elif index < -1:
             raise Exception("Index is less than 0.")
@@ -127,7 +127,7 @@ class SingleLinkedList:
             return fetched_node
 
     def set_node(self, index, value):
-        node_to_set = self.get_node(index)
+        node_to_set = self.get_node(index=index)
         if node_to_set:
             node_to_set.value = value
 
@@ -138,7 +138,6 @@ class SingleLinkedList:
         if self.length == 1:
             self.head = self.tail = None
         else:
-            popped_node = self.head
             self.head = self.head.next
             popped_node.next = None
         self.length -= 1
@@ -184,8 +183,7 @@ class SingleLinkedList:
             return popped_node
 
     def delete_all_nodes(self):
-        self.head = None
-        self.tail = None
+        self.head = self.tail = None
         self.length = 0
 
 
@@ -204,11 +202,11 @@ if __name__ == '__main__':
         single_linked_list.insert_at_the_end(value=70)
         single_linked_list.insert_at_the_end(value=80)
 
-        single_linked_list.insert_at_any_position(index=0, value=90)
-        single_linked_list.insert_at_any_position(index=1, value=100)
-        single_linked_list.insert_at_any_position(index=7, value=110)
-        single_linked_list.insert_at_any_position(index=10, value=120)
-        single_linked_list.insert_at_any_position(index=12, value=130)
+        single_linked_list.insert_at_anywhere(index=0, value=90)
+        single_linked_list.insert_at_anywhere(index=1, value=100)
+        single_linked_list.insert_at_anywhere(index=7, value=110)
+        single_linked_list.insert_at_anywhere(index=10, value=120)
+        single_linked_list.insert_at_anywhere(index=12, value=130)
 
         print(single_linked_list)
         print(single_linked_list.traverse_the_linked_list())
