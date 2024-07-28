@@ -75,8 +75,7 @@ class DoubleLinkedList:
             searched_node = self.tail
             return searched_node.value, index
         else:
-            searched_node = self.head
-            i = 0
+            searched_node, i = self.head, 0
             while i < index:
                 searched_node = searched_node.next
                 i += 1
@@ -95,26 +94,28 @@ class DoubleLinkedList:
             raise ValueError(f"The Node Value: {value} is not present in the Linked List.")
 
     def get_node(self, index):
-        if index < 0:
+        if self.length == 0 or (not self.head and not self.tail):
+            raise ValueError("The Linked List is empty.")
+        elif index < -1:
             raise IndexError("Index is less than 0.")
         elif index >= self.length:
             raise IndexError("Index is out of bounds.")
         elif index == 0:
-            current_node = self.head
-            return current_node
-        elif index == (self.length - 1):
-            current_node = self.tail
-            return current_node
-        elif index < self.length // 2:
-            current_node = self.head
+            fetched_node = self.head
+            return fetched_node
+        elif index == (self.length - 1) or index == -1:
+            fetched_node = self.tail
+            return fetched_node
+        elif 1 <= index < (self.length // 2):
+            fetched_node = self.head
             for _ in range(index):
-                current_node = current_node.next
-            return current_node
-        elif self.length // 2 <= index < (self.length - 1):
-            current_node = self.tail
+                fetched_node = fetched_node.next
+            return fetched_node
+        elif (self.length // 2) <= index < (self.length - 1):
+            fetched_node = self.tail
             for _ in range((self.length - 1), index, -1):
-                current_node = current_node.prev
-            return current_node
+                fetched_node = fetched_node.prev
+            return fetched_node
 
     def set_node(self, index, value):
         node_to_set = self.get_node(index)
@@ -125,6 +126,8 @@ class DoubleLinkedList:
         new_node = DoubleNode(value=value)
         if self.length == 0 or (not self.head and not self.tail):
             self.head = self.tail = new_node
+            self.length += 1
+            return
         elif index < 0:
             raise IndexError("Index is less than 0.")
         elif index > (self.length + 1):
@@ -195,7 +198,7 @@ class DoubleLinkedList:
 
     def delete_all_nodes(self):
         self.head = self.tail = None
-        self.length -= 1
+        self.length = 0
 
 
 if __name__ == '__main__':

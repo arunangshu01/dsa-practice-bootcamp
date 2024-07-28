@@ -139,7 +139,7 @@ class CircularSingleLinkedList:
             return fetched_node
 
     def set_node(self, index, value):
-        node_to_set = self.get_node(index)
+        node_to_set = self.get_node(index=index)
         if node_to_set:
             node_to_set.value = value
 
