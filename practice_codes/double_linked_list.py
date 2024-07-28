@@ -155,7 +155,7 @@ class DoubleLinkedList:
             self.head = self.head.next
             self.head.prev = None
             popped_node.next = None
-            popped_node.next = None
+            popped_node.prev = None
         self.length -= 1
         return popped_node
 
@@ -169,6 +169,7 @@ class DoubleLinkedList:
             self.tail = self.tail.prev
             self.tail.next = None
             popped_node.prev = None
+            popped_node.next = None
         self.length -= 1
         return popped_node
 
@@ -192,7 +193,8 @@ class DoubleLinkedList:
             popped_node = self.get_node(index=index)
             popped_node.next.prev = popped_node.prev
             popped_node.prev.next = popped_node.next
-            popped_node = None
+            popped_node.next = None
+            popped_node.prev = None
             self.length -= 1
             return popped_node
 

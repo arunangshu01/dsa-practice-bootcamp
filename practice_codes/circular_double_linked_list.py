@@ -23,7 +23,7 @@ class CircularDoubleLinkedList:
         while current_node:
             result += str(current_node.value)
             current_node = current_node.next
-            if current_node.next == self.head:
+            if current_node.next is self.head:
                 break
             result += ' <-> '
         return result
@@ -163,13 +163,61 @@ class CircularDoubleLinkedList:
             return
 
     def delete_from_beginning(self):
-        pass
+        if self.length == 0 or (not self.head and not self.tail):
+            raise ValueError("There is no element in the Linked List.")
+        popped_node = self.head
+        if self.length == 1:
+            self.head = self.tail = None
+        else:
+            self.head = self.head.next
+            popped_node.next = None
+            popped_node.prev = None
+            self.tail.next = self.head
+            self.head.prev = self.tail
+        self.length -= 1
+        return popped_node
 
     def delete_from_end(self):
-        pass
+        if self.length == 0 or (not self.head and not self.tail):
+            raise ValueError("There is no element in the Linked List.")
+        popped_node = self.tail
+        if self.length == 1:
+            self.head = self.tail = None
+        else:
+            self.tail = self.tail.prev
+            popped_node.next = None
+            popped_node.prev = None
+            self.head.prev = self.tail
+            self.tail.next = self.head
+        self.length -= 1
+        return popped_node
 
-    def delete_from_anywhere(self):
-        pass
+    def delete_from_anywhere(self, index):
+        if self.length == 0 or (not self.head and not self.tail):
+            raise ValueError("There is no element in the Linked List.")
+        elif self.length == 1:
+            popped_node = self.head
+            self.head = self.tail = None
+            self.length -= 1
+            return popped_node
+        elif index < -1:
+            raise IndexError("Index is less than 0.")
+        elif index >= self.length:
+            raise IndexError("Index is out of bounds.")
+        elif index == 0:
+            popped_node = self.delete_from_beginning()
+            return popped_node
+        elif index == (self.length - 1) or index == -1:
+            popped_node = self.delete_from_end()
+            return popped_node
+        else:
+            popped_node = self.get_node(index=index)
+            popped_node.prev.next = popped_node.next
+            popped_node.next.prev = popped_node.prev
+            popped_node.next = None
+            popped_node.prev = None
+            self.length -= 1
+            return popped_node
 
     def delete_all_nodes(self):
         self.head = self.tail = None
