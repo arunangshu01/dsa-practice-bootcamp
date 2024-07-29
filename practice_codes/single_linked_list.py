@@ -22,7 +22,7 @@ class SingleLinkedList:
         while current_node:
             result += str(current_node.value)
             if current_node.next:
-                result += '->'
+                result += ' -> '
             current_node = current_node.next
         return result
 
@@ -77,7 +77,7 @@ class SingleLinkedList:
 
     def search_in_the_linked_list_by_index(self, index):
         if self.length == 0 or (not self.head and not self.tail):
-            raise Exception("The Linked List is empty.")
+            raise Exception("There is no element in the Linked List.")
         elif index < -1:
             raise Exception("Index is less than 0.")
         elif index >= self.length:
@@ -109,7 +109,7 @@ class SingleLinkedList:
 
     def get_node(self, index):
         if self.length == 0 or (not self.head and not self.tail):
-            raise Exception("The Linked List is empty.")
+            raise Exception("There is no element in the Linked List.")
         elif index < -1:
             raise Exception("Index is less than 0.")
         elif index >= self.length:
