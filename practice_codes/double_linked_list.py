@@ -23,7 +23,7 @@ class DoubleLinkedList:
         while current_node:
             result += str(current_node.value)
             if current_node.next is not None:
-                result += '<->'
+                result += ' <-> '
             current_node = current_node.next
         return result
 
@@ -95,7 +95,7 @@ class DoubleLinkedList:
 
     def get_node(self, index):
         if self.length == 0 or (not self.head and not self.tail):
-            raise ValueError("The Linked List is empty.")
+            raise ValueError("There is no element in the Linked List.")
         elif index < -1:
             raise IndexError("Index is less than 0.")
         elif index >= self.length:
@@ -119,7 +119,7 @@ class DoubleLinkedList:
 
     def set_node(self, index, value):
         node_to_set = self.get_node(index)
-        while node_to_set:
+        if node_to_set:
             node_to_set.value = value
 
     def insert_at_anywhere(self, index, value):
@@ -155,7 +155,7 @@ class DoubleLinkedList:
             self.head = self.head.next
             self.head.prev = None
             popped_node.next = None
-            popped_node.next = None
+            popped_node.prev = None
         self.length -= 1
         return popped_node
 
@@ -169,6 +169,7 @@ class DoubleLinkedList:
             self.tail = self.tail.prev
             self.tail.next = None
             popped_node.prev = None
+            popped_node.next = None
         self.length -= 1
         return popped_node
 
@@ -192,7 +193,8 @@ class DoubleLinkedList:
             popped_node = self.get_node(index=index)
             popped_node.next.prev = popped_node.prev
             popped_node.prev.next = popped_node.next
-            popped_node = None
+            popped_node.next = None
+            popped_node.prev = None
             self.length -= 1
             return popped_node
 
@@ -229,6 +231,46 @@ if __name__ == '__main__':
         print(double_linked_list.search_in_the_linked_list_by_value(value=80))
         print(double_linked_list.search_in_the_linked_list_by_value(value=40))
         # print(double_linked_list.search_in_the_linked_list_by_value(value=400))
+
+        print(double_linked_list.get_node(index=-1))
+        print(double_linked_list.get_node(index=0))
+        print(double_linked_list.get_node(index=7))
+        # print(double_linked_list.get_node(index=100))
+
+        double_linked_list.set_node(index=-1, value=90)
+        double_linked_list.set_node(index=3, value=100)
+        double_linked_list.set_node(index=6, value=110)
+        # double_linked_list.set_node(index=100, value=120)
+
+        print(double_linked_list)
+
+        # double_linked_list.insert_at_anywhere(index=-1, value=120)
+        double_linked_list.insert_at_anywhere(index=0, value=130)
+        double_linked_list.insert_at_anywhere(index=8, value=140)
+        double_linked_list.insert_at_anywhere(index=9, value=150)
+        double_linked_list.insert_at_anywhere(index=11, value=160)
+
+        print(double_linked_list)
+
+        print(double_linked_list.delete_from_the_beginning())
+        print(double_linked_list.delete_from_the_beginning())
+
+        print(double_linked_list)
+
+        print(double_linked_list.delete_from_the_end())
+        print(double_linked_list.delete_from_the_end())
+
+        print(double_linked_list)
+
+        print(double_linked_list.delete_from_anywhere(index=-1))
+        print(double_linked_list.delete_from_anywhere(index=5))
+        print(double_linked_list.delete_from_anywhere(index=2))
+
+        print(double_linked_list)
+
+        double_linked_list.delete_all_nodes()
+
+        print(double_linked_list.delete_from_the_end())
 
     except Exception as e:
         print(e.__str__())

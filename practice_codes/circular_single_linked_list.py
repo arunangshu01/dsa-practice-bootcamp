@@ -23,7 +23,7 @@ class CircularSingleLinkedList:
             result += str(current_node.value)
             if current_node.next is self.head:
                 break
-            result += '->'
+            result += ' -> '
             current_node = current_node.next
         return result
 
