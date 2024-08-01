@@ -54,7 +54,7 @@ class SingleLinkedList:
             return
         elif index < 0:
             raise IndexError("Index is less than 0.")
-        elif index > self.length + 1:
+        elif index > self.length:
             raise IndexError("Index is out of bounds")
         elif index == 0:
             self.insert_at_the_beginning(value=value)
