@@ -49,17 +49,17 @@ class StackWithSizeLimit:
 
 if __name__ == "__main__":
     try:
-        stack_with_size_limit = StackWithSizeLimit(10)
-        print(stack_with_size_limit.push_element(10))
-        print(stack_with_size_limit.push_element(20))
-        print(stack_with_size_limit.push_element(30))
-        print(stack_with_size_limit.push_element(40))
-        print(stack_with_size_limit.push_element(50))
-        print(stack_with_size_limit.push_element(60))
-        print(stack_with_size_limit.push_element(70))
-        print(stack_with_size_limit.push_element(80))
-        print(stack_with_size_limit.push_element(90))
-        print(stack_with_size_limit.push_element(100))
+        stack_with_size_limit = StackWithSizeLimit(max_size=10)
+        print(stack_with_size_limit.push_element(value=10))
+        print(stack_with_size_limit.push_element(value=20))
+        print(stack_with_size_limit.push_element(value=30))
+        print(stack_with_size_limit.push_element(value=40))
+        print(stack_with_size_limit.push_element(value=50))
+        print(stack_with_size_limit.push_element(value=60))
+        print(stack_with_size_limit.push_element(value=70))
+        print(stack_with_size_limit.push_element(value=80))
+        print(stack_with_size_limit.push_element(value=90))
+        print(stack_with_size_limit.push_element(value=100))
         # print(stack_with_size_limit.push_element(110))
 
         # stack_with_size_limit.delete_stack()
