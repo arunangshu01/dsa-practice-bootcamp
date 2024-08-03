@@ -42,11 +42,11 @@ class StackWithoutSizeLimit:
 if __name__ == "__main__":
     try:
         stack_without_size_limit = StackWithoutSizeLimit()
-        print(stack_without_size_limit.push_element(10))
-        print(stack_without_size_limit.push_element(20))
-        print(stack_without_size_limit.push_element(30))
-        print(stack_without_size_limit.push_element(40))
-        print(stack_without_size_limit.push_element(50))
+        print(stack_without_size_limit.push_element(value=10))
+        print(stack_without_size_limit.push_element(value=20))
+        print(stack_without_size_limit.push_element(value=30))
+        print(stack_without_size_limit.push_element(value=40))
+        print(stack_without_size_limit.push_element(value=50))
 
         # stack_without_size_limit.delete_stack()
         # print(stack_without_size_limit)
