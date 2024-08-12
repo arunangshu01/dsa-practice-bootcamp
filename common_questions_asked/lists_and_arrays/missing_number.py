@@ -18,6 +18,8 @@ def missing_number(arr, n):
     return int(missing_num)
 
 
-result = missing_number(arr=[1, 2, 3, 4, 6], n=6)
-print(result)
+if __name__ == "__main__":
+    arr, n = [1, 2, 3, 4, 6], 6
+    result = missing_number(arr=arr, n=n)
+    print(result)
 
