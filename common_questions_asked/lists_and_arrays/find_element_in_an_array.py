@@ -11,9 +11,9 @@ Hint: Search the element in an array using algorithms. Also use numpy array.
 import numpy as np
 
 
-def find_number(array, number):
-    for i in range(len(array)):
-        if array[i] == number:
+def find_number(arr, number):
+    for i in range(len(arr)):
+        if arr[i] == number:
             return dict(index=i, value=number)
     raise ValueError(f"The number: {number} is not present in the array.")
 
