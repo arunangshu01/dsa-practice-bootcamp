@@ -10,7 +10,7 @@ Calculate the power of a number using recursion.
 def power_of_number(base_number, exponential_power):
     if not isinstance(exponential_power, int):
         raise ValueError("The exponential power should be of integer type !!!")
-    if exponential_power == 0:
+    elif exponential_power == 0:
         return 1
     elif exponential_power > 0:
         return base_number * power_of_number(base_number, (exponential_power - 1))
