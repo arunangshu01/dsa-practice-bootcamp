@@ -13,9 +13,9 @@ def power_of_number(base_number, exponential_power):
     elif exponential_power == 0:
         return 1
     elif exponential_power > 0:
-        return base_number * power_of_number(base_number, (exponential_power - 1))
+        return base_number * power_of_number(base_number=base_number, exponential_power=(exponential_power - 1))
     elif exponential_power < 0:
-        return 1 / base_number * power_of_number(base_number, (exponential_power + 1))
+        return 1 / base_number * power_of_number(base_number=base_number, exponential_power=(exponential_power + 1))
 
 
 if __name__ == "__main__":

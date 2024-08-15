@@ -13,7 +13,7 @@ def sum_of_digits(number):
     elif number == 0:
         return 0
     else:
-        return int(number % 10) + sum_of_digits(int(number // 10))
+        return int(number % 10) + sum_of_digits(number=(int(number // 10)))
 
 
 if __name__ == "__main__":

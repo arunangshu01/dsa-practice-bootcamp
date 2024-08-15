@@ -5,7 +5,7 @@ def open_russian_doll(doll):
         print("All dolls are opened.")
     else:
         print(f"Doll: {doll} has been opened.")
-        open_russian_doll(doll - 1)
+        open_russian_doll(doll=(doll - 1))
 
 
 if __name__ == "__main__":

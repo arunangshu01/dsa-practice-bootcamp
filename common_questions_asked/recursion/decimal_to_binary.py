@@ -12,7 +12,7 @@ def decimal_to_binary(decimal_number):
         raise ValueError("The number be an integer !!!")
     elif decimal_number == 0:
         return 0
-    return decimal_number % 2 + 10 * decimal_to_binary(int(decimal_number / 2))
+    return decimal_number % 2 + 10 * decimal_to_binary(decimal_number=(int(decimal_number / 2)))
 
 
 if __name__ == "__main__":

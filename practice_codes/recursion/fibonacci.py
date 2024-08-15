@@ -3,7 +3,7 @@ def fibonacci(n):
         raise ValueError("Fibonacci number should be a positive integer !!!")
     elif n in [0, 1]:
         return n
-    return fibonacci(n - 1) + fibonacci(n - 2)
+    return fibonacci(n=(n - 1)) + fibonacci(n=(n - 2))
 
 
 if __name__ == "__main__":

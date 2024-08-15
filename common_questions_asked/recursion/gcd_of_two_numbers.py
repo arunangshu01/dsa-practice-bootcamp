@@ -20,7 +20,7 @@ def gcd_of_two_numbers(number1, number2):
         return number2
     elif number2 == 0:
         return number1
-    return gcd_of_two_numbers(number2, number1 % number2)
+    return gcd_of_two_numbers(number1=number2, number2=(number1 % number2))
 
 
 if __name__ == "__main__":
