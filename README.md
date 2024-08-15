@@ -17,11 +17,11 @@ Each folder contains a set of problems and their solutions. You can navigate thr
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/arunangshu01/DSA_Practice
+   git clone https://github.com/arunangshu01/dsa-practice-bootcamp.git
 
 2. **Navigate to the cloned repository:**
    ```sh
-   cd DSA_Practice
+   cd dsa-practice-bootcamp
 
  3. **Explore the folders and files to find the tutorials and solutions you are interested in.**
 
