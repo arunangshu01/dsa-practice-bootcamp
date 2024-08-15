@@ -1,4 +1,4 @@
-# DSA_Practice - Data Structures and Algorithms in Python
+# dsa-practice-bootcamp - Data Structures and Algorithms Bootcamp in Python
 
 Welcome to my GitHub repository! This repository contains code tutorials for various data structures and algorithms implemented in Python. The questions and problems solved here range from basic to hard and are sourced from online coding platforms.
 
