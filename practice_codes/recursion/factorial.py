@@ -7,7 +7,7 @@ def factorial(n):
         raise ValueError("The number must be positive integer only !!!")
     elif n in [0, 1]:
         return 1
-    return n * factorial(n - 1)
+    return n * factorial(n=n - 1)
 
 
 if __name__ == "__main__":

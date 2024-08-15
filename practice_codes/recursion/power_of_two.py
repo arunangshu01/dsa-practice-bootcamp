@@ -2,7 +2,7 @@ def power_of_two(n):
     if n == 0:
         return 1
     else:
-        power = power_of_two(n - 1)
+        power = power_of_two(n=(n - 1))
         return power * 2
 
 
