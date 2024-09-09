@@ -1,75 +1,5 @@
-from typing import Any
-
-
-class SingleNode:
-
-    def __init__(self, value):
-        self.value = value
-        self.next = None
-
-    def __str__(self):
-        result = str(self.value)
-        return result
-
-
-class SingleLinkedList:
-
-    def __init__(self):
-        self.head = None
-        self.tail = None
-
-    def __iter__(self):
-        current_node = self.head
-        while current_node:
-            yield current_node
-            current_node = current_node.next
-
-
-class QueueUsingLinkedList:
-
-    def __init__(self):
-        self.linked_list_queue = SingleLinkedList()
-
-    def __str__(self):
-        if self.linked_list_queue.head:
-            queue_items = [str(queue_item) for queue_item in self.linked_list_queue]
-            result = " ".join(queue_items)
-            return result
-        return None
-
-    def is_queue_empty(self):
-        if not self.linked_list_queue.head and not self.linked_list_queue.tail:
-            return True
-        return False
-
-    def enqueue_element(self, value):
-        new_node_element = SingleNode(value=value)
-        if self.is_queue_empty():
-            self.linked_list_queue.head = self.linked_list_queue.tail = new_node_element
-        else:
-            self.linked_list_queue.tail.next = new_node_element
-            self.linked_list_queue.tail = new_node_element
-        return
-
-    def dequeue_element(self):
-        if self.is_queue_empty():
-            raise Exception("There is no element in the Queue.")
-        dequeued_node_element = self.linked_list_queue.head
-        if self.linked_list_queue.head == self.linked_list_queue.tail:
-            self.linked_list_queue.head = self.linked_list_queue.tail = None
-        else:
-            self.linked_list_queue.head = self.linked_list_queue.head.next
-            dequeued_node_element.next = None
-        return dequeued_node_element
-
-    def peek_element(self):
-        if self.is_queue_empty():
-            raise Exception("There is no element in the Queue.")
-        peeked_node_element = self.linked_list_queue.head
-        return peeked_node_element
-
-    def delete_queue(self):
-        self.linked_list_queue.head = self.linked_list_queue.tail = None
+from typing import Any, AnyStr
+from practice_codes.queues.queue_using_linked_list import QueueUsingLinkedList
 
 
 class BinaryTreeNodeUsingLinkedList:
@@ -82,7 +12,7 @@ class BinaryTreeNodeUsingLinkedList:
 
 def pre_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
     if not root_node:
-        return
+        return "There is no root node in the Binary Tree."
     print(root_node.data)
     pre_order_traversal_of_binary_tree(root_node=root_node.left_child)
     pre_order_traversal_of_binary_tree(root_node=root_node.right_child)
@@ -90,7 +20,7 @@ def pre_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedList)
 
 def in_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
     if not root_node:
-        return
+        return "There is no root node in the Binary Tree."
     in_order_traversal_of_binary_tree(root_node=root_node.left_child)
     print(root_node.data)
     in_order_traversal_of_binary_tree(root_node=root_node.right_child)
@@ -98,7 +28,7 @@ def in_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
 
 def post_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
     if not root_node:
-        return
+        return "There is no root node in the Binary Tree."
     post_order_traversal_of_binary_tree(root_node=root_node.left_child)
     post_order_traversal_of_binary_tree(root_node=root_node.right_child)
     print(root_node.data)
@@ -106,12 +36,12 @@ def post_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedList
 
 def level_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
     if not root_node:
-        return
+        return "There is no root node in the Binary Tree."
     else:
-        queue_for_binary_tree = QueueUsingLinkedList()
+        queue_for_binary_tree, root = QueueUsingLinkedList(), None
         queue_for_binary_tree.enqueue_element(value=root_node)
         while not queue_for_binary_tree.is_queue_empty():
-            root = queue_for_binary_tree.dequeue_element()
+            root = queue_for_binary_tree.dequeue_element(need_print=False)
             print(root.value.data)
             if root.value.left_child:
                 queue_for_binary_tree.enqueue_element(value=root.value.left_child)
@@ -119,14 +49,14 @@ def level_order_traversal_of_binary_tree(root_node: BinaryTreeNodeUsingLinkedLis
                 queue_for_binary_tree.enqueue_element(value=root.value.right_child)
 
 
-def search_in_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, node_value: Any):
+def search_in_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, node_value: Any | AnyStr):
     if not root_node:
-        return
+        return "There is no root node in the Binary Tree."
     else:
-        queue_for_binary_tree = QueueUsingLinkedList()
+        queue_for_binary_tree, root = QueueUsingLinkedList(), None
         queue_for_binary_tree.enqueue_element(value=root_node)
         while not queue_for_binary_tree.is_queue_empty():
-            root = queue_for_binary_tree.dequeue_element()
+            root = queue_for_binary_tree.dequeue_element(need_print=False)
             if root.value.data == node_value:
                 return f"The Node with value: {root.value.data} is present in the Binary Tree."
             if root.value.left_child:
@@ -141,10 +71,10 @@ def insert_node_in_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, new_nod
         root_node = new_node
         return f"The Node with value: {root_node.data} is inserted into the Binary Tree."
     else:
-        queue_for_binary_tree = QueueUsingLinkedList()
+        queue_for_binary_tree, root = QueueUsingLinkedList(), None
         queue_for_binary_tree.enqueue_element(value=root_node)
         while not queue_for_binary_tree.is_queue_empty():
-            root = queue_for_binary_tree.dequeue_element()
+            root = queue_for_binary_tree.dequeue_element(need_print=False)
             if root.value.left_child:
                 queue_for_binary_tree.enqueue_element(value=root.value.left_child)
             else:
@@ -157,28 +87,118 @@ def insert_node_in_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, new_nod
                 return f"The Node with value: {new_node.data} is inserted into the Binary Tree."
 
 
+def get_deepest_node_in_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
+    if not root_node:
+        return "There is no root node in the Binary Tree."
+    else:
+        queue_for_binary_tree, root = QueueUsingLinkedList(), None
+        queue_for_binary_tree.enqueue_element(value=root_node)
+        while not queue_for_binary_tree.is_queue_empty():
+            root = queue_for_binary_tree.dequeue_element(need_print=False)
+            if root.value.left_child:
+                queue_for_binary_tree.enqueue_element(value=root.value.left_child)
+            if root.value.right_child:
+                queue_for_binary_tree.enqueue_element(value=root.value.right_child)
+        deepest_node_in_binary_tree = root.value
+        return deepest_node_in_binary_tree
+
+
+def delete_deepest_node_from_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, deepest_node: BinaryTreeNodeUsingLinkedList):
+    if not root_node:
+        return "There is no root node in the Binary Tree."
+    else:
+        queue_for_binary_tree, root = QueueUsingLinkedList(), None
+        queue_for_binary_tree.enqueue_element(value=root_node)
+        while not queue_for_binary_tree.is_queue_empty():
+            root = queue_for_binary_tree.dequeue_element(need_print=False)
+            if root.value is deepest_node:
+                root.value = None
+                return
+            if root.value.right_child:
+                if root.value.right_child is deepest_node:
+                    root.value.right_child = None
+                    return
+                else:
+                    queue_for_binary_tree.enqueue_element(value=root.value.right_child)
+            if root.value.left_child:
+                if root.value.left_child is deepest_node:
+                    root.value.left_child = None
+                    return
+                else:
+                    queue_for_binary_tree.enqueue_element(value=root.value.left_child)
+
+
+def delete_node_from_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, node: Any | AnyStr):
+    if not root_node:
+        return "There is no root node in the Binary Tree."
+    else:
+        queue_for_binary_tree, root = QueueUsingLinkedList(), None
+        queue_for_binary_tree.enqueue_element(value=root_node)
+        while not queue_for_binary_tree.is_queue_empty():
+            root = queue_for_binary_tree.dequeue_element(need_print=False)
+            if root.value.data == node:
+                deepest_node = get_deepest_node_in_binary_tree(root_node=root_node)
+                root.value.data = deepest_node.data
+                delete_deepest_node_from_binary_tree(root_node=root_node, deepest_node=deepest_node)
+                return f"The Node with value: {node} has been successfully deleted."
+            if root.value.left_child:
+                queue_for_binary_tree.enqueue_element(value=root.value.left_child)
+            if root.value.right_child:
+                queue_for_binary_tree.enqueue_element(value=root.value.right_child)
+        raise ValueError(f"Failed to delete the node with value: {node} is not present in the Binary Tree.")
+
+
+def delete_entire_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
+    root_node.data = root_node.left_child = root_node.right_child = None
+    return "The entire Binary Tree has been deleted successfully."
+
+
 if __name__ == "__main__":
     try:
-        binary_tree_using_linked_list = BinaryTreeNodeUsingLinkedList(data="Drinks")
-        left_child, right_child = BinaryTreeNodeUsingLinkedList(data="Hot"), BinaryTreeNodeUsingLinkedList(data="Cold")
-        binary_tree_using_linked_list.left_child, binary_tree_using_linked_list.right_child = left_child, right_child
+        drinks = BinaryTreeNodeUsingLinkedList(data="Drinks")
 
-        left_child_of_left_child, right_child_of_left_child = BinaryTreeNodeUsingLinkedList(data="Tea"), BinaryTreeNodeUsingLinkedList(data="Coffee")
-        left_child.left_child, left_child.right_child = left_child_of_left_child, right_child_of_left_child
+        hot, cold = BinaryTreeNodeUsingLinkedList(data="Hot"), BinaryTreeNodeUsingLinkedList(data="Cold")
+        print(insert_node_in_binary_tree(root_node=drinks, new_node=hot))
+        print(insert_node_in_binary_tree(root_node=drinks, new_node=cold))
 
-        left_child_of_right_child, right_child_of_right_child = BinaryTreeNodeUsingLinkedList(data="Cola"), BinaryTreeNodeUsingLinkedList(data="Fanta")
-        print(insert_node_in_binary_tree(binary_tree_using_linked_list, left_child_of_right_child))
-        print(insert_node_in_binary_tree(binary_tree_using_linked_list,  right_child_of_right_child))
+        tea, coffee = BinaryTreeNodeUsingLinkedList(data="Tea"), BinaryTreeNodeUsingLinkedList(data="Coffee")
+        print(insert_node_in_binary_tree(root_node=drinks, new_node=tea))
+        print(insert_node_in_binary_tree(root_node=drinks, new_node=coffee))
+
+        cola, fanta = BinaryTreeNodeUsingLinkedList(data="Cola"), BinaryTreeNodeUsingLinkedList(data="Fanta")
+        print(insert_node_in_binary_tree(root_node=drinks, new_node=cola))
+        print(insert_node_in_binary_tree(root_node=drinks, new_node=fanta))
 
         print("Pre-Order Traversal of the Binary Tree:")
-        pre_order_traversal_of_binary_tree(root_node=binary_tree_using_linked_list)
+        pre_order_traversal_of_binary_tree(root_node=drinks)
+
         print("\nIn-Order Traversal of the Binary Tree:")
-        in_order_traversal_of_binary_tree(root_node=binary_tree_using_linked_list)
+        in_order_traversal_of_binary_tree(root_node=drinks)
+
         print("\nPost-Order Traversal of the Binary Tree:")
-        post_order_traversal_of_binary_tree(root_node=binary_tree_using_linked_list)
+        post_order_traversal_of_binary_tree(root_node=drinks)
+
         print("\nLevel-Order Traversal of the Binary Tree:")
-        level_order_traversal_of_binary_tree(root_node=binary_tree_using_linked_list)
+        level_order_traversal_of_binary_tree(root_node=drinks)
+
         print("\nSearching a Node in Binary Tree:")
-        print(search_in_binary_tree(root_node=binary_tree_using_linked_list, node_value="Cola"))
+        print(search_in_binary_tree(root_node=drinks, node_value="Cola"))
+
+        deepest_node_in_binary_tree = get_deepest_node_in_binary_tree(root_node=drinks)
+        print(f"\nDeepest Node in Binary Tree: {deepest_node_in_binary_tree.data}")
+
+        delete_deepest_node_from_binary_tree(root_node=drinks, deepest_node=deepest_node_in_binary_tree)
+        print("\nLevel-Order Traversal of the Binary Tree after deleting the deepest node:")
+        level_order_traversal_of_binary_tree(root_node=drinks)
+
+        node_to_delete = "Tea"
+        delete_node_from_binary_tree(root_node=drinks, node=node_to_delete)
+        print(f"\nLevel-Order Traversal of the Binary Tree after deleting the node with value - {node_to_delete}:")
+        level_order_traversal_of_binary_tree(root_node=drinks)
+
+        print(f"\n{delete_entire_binary_tree(root_node=drinks)}")
+        print(f"\nLevel-Order Traversal of the Binary Tree after deleting it entirely:")
+        level_order_traversal_of_binary_tree(root_node=drinks)
+
     except Exception as e:
         print(e.__str__())
