@@ -48,7 +48,7 @@ class QueueUsingLinkedList:
             self.linked_list_queue.tail = new_node_element
         return f"Element Value: {new_node_element} has been enqueued in the Queue."
 
-    def dequeue_element(self):
+    def dequeue_element(self, need_print=True):
         if self.is_queue_empty():
             raise Exception("There is no element in the Queue.")
         dequeued_node_element = self.linked_list_queue.head
@@ -57,13 +57,17 @@ class QueueUsingLinkedList:
         else:
             self.linked_list_queue.head = self.linked_list_queue.head.next
             dequeued_node_element.next = None
-        return f"The first element of value: {dequeued_node_element} has been dequeued from the Queue."
+        if need_print:
+            print(f"The first element of value: {dequeued_node_element} has been dequeued from the Queue.")
+        return dequeued_node_element
 
-    def peek_element(self):
+    def peek_element(self, need_print=True):
         if self.is_queue_empty():
             raise Exception("There is no element in the Queue.")
         peeked_node_element = self.linked_list_queue.head
-        return f"The first element of the Queue is of value: {peeked_node_element}."
+        if need_print:
+            print(f"The first element of the Queue is of value: {peeked_node_element}.")
+        return peeked_node_element
 
     def delete_queue(self):
         self.linked_list_queue.head = self.linked_list_queue.tail = None
