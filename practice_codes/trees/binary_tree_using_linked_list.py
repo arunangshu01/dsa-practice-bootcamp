@@ -99,8 +99,8 @@ def get_deepest_node_in_binary_tree(root_node: BinaryTreeNodeUsingLinkedList):
                 queue_for_binary_tree.enqueue_element(value=root.value.left_child)
             if root.value.right_child:
                 queue_for_binary_tree.enqueue_element(value=root.value.right_child)
-        deepest_node_in_binary_tree = root.value
-        return deepest_node_in_binary_tree
+        deepest_node = root.value
+        return deepest_node
 
 
 def delete_deepest_node_from_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, deepest_node: BinaryTreeNodeUsingLinkedList):
@@ -140,7 +140,7 @@ def delete_node_from_binary_tree(root_node: BinaryTreeNodeUsingLinkedList, node:
                 deepest_node = get_deepest_node_in_binary_tree(root_node=root_node)
                 root.value.data = deepest_node.data
                 delete_deepest_node_from_binary_tree(root_node=root_node, deepest_node=deepest_node)
-                return f"The Node with value: {node} has been successfully deleted."
+                return f"The Node with value: {node} has been successfully deleted from the Binary Tree."
             if root.value.left_child:
                 queue_for_binary_tree.enqueue_element(value=root.value.left_child)
             if root.value.right_child:
@@ -184,15 +184,17 @@ if __name__ == "__main__":
         print("\nSearching a Node in Binary Tree:")
         print(search_in_binary_tree(root_node=drinks, node_value="Cola"))
 
-        deepest_node_in_binary_tree = get_deepest_node_in_binary_tree(root_node=drinks)
-        print(f"\nDeepest Node in Binary Tree: {deepest_node_in_binary_tree.data}")
+        deepest_node = get_deepest_node_in_binary_tree(root_node=drinks)
+        print(f"\nDeepest Node in Binary Tree: {deepest_node.data}")
 
-        delete_deepest_node_from_binary_tree(root_node=drinks, deepest_node=deepest_node_in_binary_tree)
+        delete_deepest_node_from_binary_tree(root_node=drinks, deepest_node=deepest_node)
         print("\nLevel-Order Traversal of the Binary Tree after deleting the deepest node:")
         level_order_traversal_of_binary_tree(root_node=drinks)
 
+        print("\nDeleting a node from a Binary Tree:")
         node_to_delete = "Tea"
-        delete_node_from_binary_tree(root_node=drinks, node=node_to_delete)
+        print(delete_node_from_binary_tree(root_node=drinks, node=node_to_delete))
+
         print(f"\nLevel-Order Traversal of the Binary Tree after deleting the node with value - {node_to_delete}:")
         level_order_traversal_of_binary_tree(root_node=drinks)
 
