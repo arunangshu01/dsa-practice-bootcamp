@@ -1,6 +1,6 @@
 """
 
-Reverse a Singly Linked List
+Reverse a Singly Linked List -
 
 Write a function to reverse a singly linked list. The function should reverse the original linked list.
 

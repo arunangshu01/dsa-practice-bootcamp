@@ -1,6 +1,6 @@
 """
 
-Remove Duplicates from a Singly Linked List
+Remove Duplicates from a Singly Linked List -
 
 Given a singly linked list, write a function that removes all the duplicates. use this linked list.
 

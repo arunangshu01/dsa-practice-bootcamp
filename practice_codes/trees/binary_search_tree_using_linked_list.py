@@ -83,7 +83,7 @@ def search_in_binary_search_tree(root_node: BinarySearchTreeNodeUsingLinkedList,
     raise ValueError(f"The Node with value: {node_value} is is present in the Binary Search Tree.")
 
 
-def minimum_value_node_in_binary_search_tree(binary_search_tree_node: BinarySearchTreeNodeUsingLinkedList):
+def get_minimum_value_node_in_binary_search_tree(binary_search_tree_node: BinarySearchTreeNodeUsingLinkedList):
     current_node = binary_search_tree_node
     while current_node.left_child:
         current_node = current_node.left_child
@@ -108,7 +108,7 @@ def delete_node_from_binary_search_tree(root_node: BinarySearchTreeNodeUsingLink
             temp_node, root_node = root_node.left_child, None
             print(f"The Node with value: {node_value} has been successfully deleted from the Binary Tree.")
             return temp_node
-        temp_node = minimum_value_node_in_binary_search_tree(root_node.right_child)
+        temp_node = get_minimum_value_node_in_binary_search_tree(root_node.right_child)
         root_node.data = temp_node.data
         root_node.right_child = delete_node_from_binary_search_tree(root_node.right_child, temp_node.data)
     return root_node
@@ -150,8 +150,7 @@ if __name__ == "__main__":
 
         print("\nDeleting a node from a Binary Tree:")
         node_to_delete = 100
-        print(delete_node_from_binary_search_tree(root_node=binary_search_tree_using_linked_list,
-                                                  node_value=node_to_delete))
+        print(delete_node_from_binary_search_tree(root_node=binary_search_tree_using_linked_list, node_value=node_to_delete))
 
         print(f"\nLevel-Order Traversal of the Binary Search Tree after deleting the node with value - {node_to_delete}:")
         level_order_traversal_of_binary_search_tree(root_node=binary_search_tree_using_linked_list)
