@@ -1,6 +1,6 @@
 """
 
-Leetcode Question: 9. Palindrome Number
+LeetCode Question:  9. Palindrome Number
 
 """
 

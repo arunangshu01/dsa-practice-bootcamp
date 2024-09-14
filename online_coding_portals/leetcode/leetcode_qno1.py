@@ -1,6 +1,6 @@
 """
 
-Leetcode Question: 1. Two Sum
+LeetCode Question:  1. Two Sum
 
 """
 

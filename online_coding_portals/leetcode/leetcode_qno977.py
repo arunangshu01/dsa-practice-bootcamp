@@ -1,6 +1,6 @@
 """
 
-Leetcode Question: 977. Squares of a Sorted Array
+LeetCode Question:  977. Squares of a Sorted Array
 
 """
 from typing import List

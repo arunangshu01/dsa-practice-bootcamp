@@ -1,6 +1,6 @@
 """
 
-Leetcode Question: 1342. Number of Steps to Reduce a Number to Zero
+LeetCode Question:  1342. Number of Steps to Reduce a Number to Zero
 
 """
 
