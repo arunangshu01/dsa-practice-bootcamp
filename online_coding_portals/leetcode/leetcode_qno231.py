@@ -11,8 +11,10 @@ class Solution:
             return False
         elif n == 1:
             return True
-        while n % 2 == 0:
-            n /= 2
-        if n == 1:
+        else:
+            while n != 1:
+                if n % 2 != 0:
+                    return False
+                else:
+                    n = n // 2
             return True
-        return False
