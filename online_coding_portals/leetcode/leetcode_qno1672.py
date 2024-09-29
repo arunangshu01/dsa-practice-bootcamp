@@ -1,9 +1,8 @@
 """
 
-LeetCode Question:  1672. Richest Customer Wealth
+LeetCode Question: 1672. Richest Customer Wealth
 
 """
-
 
 from typing import List
 

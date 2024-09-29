@@ -25,10 +25,8 @@ def two_sum_find_pairs_distinct(nums, target):
     pairs = []
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
-            if nums[i] == nums[j]:
-                continue
-            elif nums[i] + nums[j] == target:
-                pairs.append((i, j))
+            if nums[i] != nums[j] and nums[i] + nums[j] == target:
+                pairs.append((nums[i], nums[j]))
     return pairs
 
 
@@ -37,7 +35,7 @@ def two_sum_find_pairs_non_distinct(nums, target):
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
-                pairs.append((i, j))
+                pairs.append((nums[i], nums[j]))
     return pairs
 
 
@@ -45,10 +43,8 @@ def two_sum_find_pairs_distinct_new(nums, target):
     seen, pairs = {}, []
     for i, num in enumerate(nums):
         complement = target - num
-        if complement == num:
-            continue
-        elif complement in seen:
-            pairs.append((seen[complement], i))
+        if complement != num and complement in seen:
+            pairs.append((nums[seen[complement]], nums[i]))
         else:
             seen[num] = i
     return pairs
@@ -59,7 +55,7 @@ def two_sum_find_pairs_non_distinct_new(nums, target):
     for i, num in enumerate(nums):
         complement = target - num
         if complement in seen:
-            pairs.append((seen[complement], i))
+            pairs.append((nums[seen[complement]], nums[i]))
         else:
             seen[num] = i
     return pairs
