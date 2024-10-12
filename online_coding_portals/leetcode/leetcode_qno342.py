@@ -15,7 +15,6 @@ class Solution:
             while n != 1:
                 if n % 4 != 0:
                     return False
-                    break
                 else:
                     n = n // 4
             return True
