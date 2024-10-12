@@ -13,5 +13,4 @@ class Solution:
             for j in range(len(arr)):
                 if i != j and arr[i] == arr[j] * 2:
                     return True
-                    break
         return False
