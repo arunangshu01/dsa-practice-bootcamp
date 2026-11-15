@@ -1,5 +1,7 @@
 # dsa-practice-bootcamp - Data Structures and Algorithms Bootcamp in Python
 
+**[Browse the docs site →](https://arunangshu01.github.io/dsa-practice-bootcamp/)**
+
 Welcome to my GitHub repository! This repository contains code tutorials for various data structures and algorithms implemented in Python. The questions and problems solved here range from basic to hard and are sourced from online coding platforms.
 
 ## Problem Sources
@@ -219,6 +221,8 @@ Each folder contains a set of problems and their solutions. You can navigate thr
 The index above is auto-generated. After adding new code samples, run `python gen_docs.py` to refresh it (also regenerates the docs site pages).
 
 ## Docs Site
+
+Live site: **https://arunangshu01.github.io/dsa-practice-bootcamp/**
 
 The repository ships with a MkDocs site that renders every solution as a browsable page. To preview locally:
 
