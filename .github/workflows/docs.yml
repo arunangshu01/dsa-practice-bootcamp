@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.x"
           cache: pip
-      - run: pip install -r requirements.txt
+      - run: pip install mkdocs-material
       - run: python gen_docs.py
       - run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
