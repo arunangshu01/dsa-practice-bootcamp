@@ -19,6 +19,7 @@ Docstring convention (all fields optional — first line is the title):
 """
 
 import ast
+import re
 import shutil
 from pathlib import Path
 
@@ -47,6 +48,9 @@ SPECIAL_CASES = {
     "dfs": "DFS",
     "bfs": "BFS",
     "qno": "Q.No.",
+    "ii": "II",
+    "iii": "III",
+    "iv": "IV",
 }
 
 
@@ -58,6 +62,18 @@ def titleize(name: str) -> str:
         suffix = w[len(key):] if w.lower().startswith(key) else ""
         out.append(SPECIAL_CASES.get(key, w) + suffix)
     return " ".join(out)
+
+
+LEETCODE_PREFIX = re.compile(r"(?i)^leetcode question:\s*(\d+)\.?\s*(.*)$")
+
+
+def clean_title(raw: str, fallback: str) -> str:
+    """Normalize a docstring title into a consistent display title."""
+    title = " ".join(raw.split())
+    m = LEETCODE_PREFIX.match(title)
+    if m:
+        return f"{m.group(1)}. {titleize(m.group(2))}"
+    return titleize(title) if title else titleize(fallback)
 
 
 def py_files():
@@ -98,7 +114,7 @@ def write_page(category: str, topic_dir: Path, f: Path) -> Path:
     """Emit a markdown page for one solution file; returns the page path."""
     source = f.read_text(encoding="utf-8")
     info = parse_docstring(source)
-    title = info["title"] or titleize(f.stem)
+    title = clean_title(info["title"], f.stem)
 
     out = [f"# {title}\n"]
     meta = info["meta"]
@@ -145,7 +161,7 @@ def write_section_indexes() -> None:
             topic_lines = [f"# {titleize(topic_dir.name)}\n"]
             for f in files:
                 info = parse_docstring(f.read_text(encoding="utf-8"))
-                title = info["title"] or titleize(f.stem)
+                title = clean_title(info["title"], f.stem)
                 diff = info["meta"].get("difficulty")
                 suffix = f" — *{diff}*" if diff else ""
                 topic_lines.append(f"- **[{title}]({f.stem}.md)**{suffix}")
