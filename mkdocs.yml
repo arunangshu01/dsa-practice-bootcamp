@@ -24,6 +24,18 @@ theme:
     - content.code.copy
     - navigation.footer
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arunangshu01
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arunangshu-pramanik-1896168b/
+      name: LinkedIn
+    - icon: fontawesome/solid/envelope
+      link: mailto:arunangshu01@gmail.com
+      name: Email
+
 extra_css:
   - stylesheets/ironman.css
 
