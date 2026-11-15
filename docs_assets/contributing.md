@@ -1,6 +1,6 @@
 # Contributing
 
-Adding a new solution is simple — this site regenerates itself on every push to `master`.
+Adding a new solution is simple - this site regenerates itself on every push to `master`.
 
 ## Steps
 
@@ -30,10 +30,10 @@ Adding a new solution is simple — this site regenerates itself on every push t
     - `Difficulty:`, `Source:`, `Link:` = rendered as badges (all optional)
     - Everything else = shown in the "Problem" panel
 
-3. Commit and push to `master`. The site rebuilds and your page appears in the sidebar, its topic index, the Tags page, and search — no other steps needed.
+3. Commit and push to `master`. The site rebuilds and your page appears in the sidebar, its topic index, the Tags page, and search - no other steps needed.
 
 ## Conventions
 
-- Filenames: `snake_case.py` — they become page URLs.
-- Include a `if __name__ == "__main__":` block that prints example output — it gets executed at build time and shown in the Output panel.
+- Filenames: `snake_case.py` - they become page URLs.
+- Include a `if __name__ == "__main__":` block that prints example output - it gets executed at build time and shown in the Output panel.
 - `__init__.py` files are ignored.

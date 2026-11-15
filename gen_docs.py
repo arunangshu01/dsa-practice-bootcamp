@@ -6,7 +6,7 @@ the README index. Run after adding new samples (CI also runs this):
 
     python gen_docs.py
 
-Docstring convention (all fields optional — first line is the title):
+Docstring convention (all fields optional - first line is the title):
 
     \"\"\"Two Sum
 
@@ -245,14 +245,14 @@ def write_section_indexes() -> None:
                 continue
             cat_lines.append(
                 f"- **[{titleize(topic_dir.name)}]({topic_dir.name}/index.md)**"
-                f" — {len(files)} solutions"
+                f" - {len(files)} solutions"
             )
             topic_lines = [f"# {titleize(topic_dir.name)}\n"]
             for f in files:
                 info = parse_docstring(f.read_text(encoding="utf-8"))
                 title = clean_title(info["title"], f.stem)
                 diff = info["meta"].get("difficulty")
-                suffix = f" — *{diff}*" if diff else ""
+                suffix = f" - *{diff}*" if diff else ""
                 topic_lines.append(f"- **[{title}]({f.stem}.md)**{suffix}")
             (cat_docs / topic_dir.name / "index.md").write_text(
                 "\n".join(topic_lines) + "\n"
@@ -320,7 +320,7 @@ def write_homepage(entries: list) -> None:
             diff_counts[d] = diff_counts.get(d, 0) + 1
     lines = [
         "# DSA Practice Bootcamp\n",
-        "Data structures and algorithms implemented in Python — "
+        "Data structures and algorithms implemented in Python - "
         "browsable by category, topic, and difficulty.\n",
         "## Stats\n",
         "| Metric | Count |",
@@ -341,7 +341,7 @@ def write_homepage(entries: list) -> None:
         if n:
             lines.append(
                 f"- **[{titleize(category)}]({category}/index.md)**"
-                f" — {n} solutions"
+                f" - {n} solutions"
             )
     lines.append("\n---\n\nBrowse via the sidebar, the "
                  "[Tags](tags.md) page, or the search bar above.\n")
