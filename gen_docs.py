@@ -64,6 +64,9 @@ def titleize(name: str) -> str:
     words = name.replace("_", " ").title().replace("'S", "'s").split()
     out = []
     for w in words:
+        if w.lower() == "and":
+            out.append("&")
+            continue
         key = w.lower().rstrip("0123456789")
         suffix = w[len(key):] if w.lower().startswith(key) else ""
         out.append(SPECIAL_CASES.get(key, w) + suffix)
@@ -268,9 +271,17 @@ def update_readme_index() -> None:
         README.write_text(readme)
 
 
+def copy_static_assets() -> None:
+    """Copy hand-maintained assets (CSS, images) into the generated docs."""
+    assets = REPO_ROOT / "docs_assets"
+    if assets.is_dir():
+        shutil.copytree(assets, DOCS_DIR, dirs_exist_ok=True)
+
+
 def main() -> None:
     if DOCS_DIR.exists():
         shutil.rmtree(DOCS_DIR)
+    copy_static_assets()
     counts = {}
     for category, topic_dir, f in py_files():
         write_page(category, topic_dir, f)

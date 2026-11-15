@@ -103,7 +103,7 @@ Each folder contains a set of problems and their solutions. You can navigate thr
 - [Split A Circular Linked List Into Two Equal Halves](common_questions_asked/linked_lists/split_a_circular_linked_list_into_two_equal_halves.py)
 - [Sum Lists](common_questions_asked/linked_lists/sum_lists.py)
 
-#### Lists And Arrays
+#### Lists & Arrays
 - [Best Score](common_questions_asked/lists_and_arrays/best_score.py)
 - [Contains Duplicate](common_questions_asked/lists_and_arrays/contains_duplicate.py)
 - [Duplicate Number](common_questions_asked/lists_and_arrays/duplicate_number.py)
@@ -137,7 +137,7 @@ Each folder contains a set of problems and their solutions. You can navigate thr
 - [Stringify Numbers](common_questions_asked/recursion/stringify_numbers.py)
 - [Sum Of Digits](common_questions_asked/recursion/sum_of_digits.py)
 
-#### Stacks And Queues
+#### Stacks & Queues
 - [Animal Shelter](common_questions_asked/stacks_and_queues/animal_shelter.py)
 - [Queue Via Stacks](common_questions_asked/stacks_and_queues/queue_via_stacks.py)
 - [Sort Stack](common_questions_asked/stacks_and_queues/sort_stack.py)
@@ -151,7 +151,7 @@ Each folder contains a set of problems and their solutions. You can navigate thr
 - [Diagonal](common_questions_asked/tuples/diagonal.py)
 - [Elementwise Sum](common_questions_asked/tuples/elementwise_sum.py)
 - [Insert At The Beginning](common_questions_asked/tuples/insert_at_the_beginning.py)
-- [Sum And Product](common_questions_asked/tuples/sum_and_product.py)
+- [Sum & Product](common_questions_asked/tuples/sum_and_product.py)
 
 ### Online Coding Portals
 

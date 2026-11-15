@@ -1,0 +1,60 @@
+/* Iron Man / J.A.R.V.I.S. theme overrides.
+   Dark "Jarvis" scheme: arc-reactor cyan on deep blue-black, gold accents.
+   Light "Stark" scheme: engineered white/steel with hot-rod red accents. */
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #00b8d9;
+  --md-primary-fg-color--light: #66e0ff;
+  --md-primary-fg-color--dark: #0077b6;
+  --md-accent-fg-color: #ffb703;
+  --md-accent-fg-color--transparent: #ffb7031a;
+  --md-default-bg-color: #050c1a;
+  --md-default-bg-color--light: #0b1930;
+  --md-default-bg-color--lighter: #122544;
+  --md-default-bg-color--lightest: #1a3157;
+  --md-code-bg-color: #0a1428;
+  --md-code-fg-color: #d8ecff;
+  --md-typeset-a-color: #4cc9f0;
+  --md-footer-bg-color: #030711;
+  --md-footer-bg-color--dark: #01040a;
+  --md-shadow-z1: 0 0 0.2rem #00b8d933;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #8c1c13;
+  --md-primary-fg-color--light: #b23a2a;
+  --md-primary-fg-color--dark: #6b0f08;
+  --md-accent-fg-color: #005f99;
+  --md-accent-fg-color--transparent: #005f991a;
+  --md-default-bg-color: #f6f8fb;
+  --md-typeset-a-color: #005f99;
+  --md-code-bg-color: #eef1f6;
+  --md-footer-bg-color: #8c1c13cc;
+  --md-footer-bg-color--dark: #6b0f08;
+}
+
+/* Arc-reactor glow on the site name / header accents. */
+.md-header__title .md-header__topic:first-child {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(90deg, #050c1a, #0b2a4a 60%, #050c1a);
+  border-bottom: 1px solid #00b8d955;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  background: linear-gradient(90deg, #6b0f08, #8c1c13 60%, #5a0c06);
+}
+
+/* Code blocks: Jarvis terminal feel in dark mode. */
+[data-md-color-scheme="slate"] .highlight {
+  border: 1px solid #00b8d926;
+  border-radius: 6px;
+}
+
+/* Difficulty-style badges and links hover glow. */
+[data-md-color-scheme="slate"] a:hover {
+  text-shadow: 0 0 0.4rem #00b8d966;
+}
