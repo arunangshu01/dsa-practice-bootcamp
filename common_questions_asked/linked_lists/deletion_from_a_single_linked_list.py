@@ -1,10 +1,10 @@
 """
-
 Deletion from a Singly Linked List -
+
+Source: Common Interview Question
 
 Write a function to delete a node from a singly linked list and return deleted_node. The function should take the
 index(starting from 0) of the node to be deleted as a parameter.
-
 """
 
 

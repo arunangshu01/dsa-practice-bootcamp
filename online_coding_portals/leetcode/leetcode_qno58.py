@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 58. Length of Last Word
 
+Source: LeetCode
 """
 
 import re

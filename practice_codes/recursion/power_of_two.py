@@ -1,3 +1,9 @@
+"""
+Power Of Two
+
+Source: Practice
+"""
+
 def power_of_two(n):
     if n == 0:
         return 1

@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 50. Pow(x, n)
 
+Source: LeetCode
 """
 
 

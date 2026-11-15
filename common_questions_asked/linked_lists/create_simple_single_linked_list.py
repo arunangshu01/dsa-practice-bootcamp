@@ -1,6 +1,7 @@
 """
-
 Create Simple Singly Linked List DS -
+
+Source: Common Interview Question
 
 Write a code in the language of your choice to implement a singly linked list. A singly linked list has the
 following properties:
@@ -17,7 +18,6 @@ following properties:
     4. head and tail attributes of the linked list to point to the new node.
 
     5. A length attribute, initialized to 1, which represents the current number of nodes in the list.
-
 """
 
 

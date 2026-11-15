@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 941. Valid Mountain Array
 
+Source: LeetCode
 """
 
 from typing import List

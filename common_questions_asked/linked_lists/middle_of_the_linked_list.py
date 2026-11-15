@@ -1,6 +1,7 @@
 """
-
 Middle of the Linked List -
+
+Source: Common Interview Question
 
 Given the head of a singly linked list, return the middle node of the linked list.
 
@@ -19,7 +20,6 @@ Example 2:
 Constraints:
     The number of nodes in the list is in the range [1, 100].
     1 <= Node.val <= 100
-
 """
 
 

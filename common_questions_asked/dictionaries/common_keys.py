@@ -1,6 +1,7 @@
 """
-
 Common Keys
+
+Source: Common Interview Question
 
 Define a function with takes two dictionaries as parameters and merge them and sum the values of common keys.
 
@@ -11,7 +12,6 @@ Example:
 
 Output:
     {'a': 1, 'b': 5, 'c': 7, 'd': 5}
-
 """
 
 

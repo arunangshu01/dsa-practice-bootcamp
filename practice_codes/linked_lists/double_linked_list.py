@@ -1,3 +1,9 @@
+"""
+Double Linked List
+
+Source: Practice
+"""
+
 class DoubleNode:
 
     def __init__(self, value):

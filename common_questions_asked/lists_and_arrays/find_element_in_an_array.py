@@ -1,11 +1,11 @@
 """
-
 Find a number in an array.
+
+Source: Common Interview Question
 
 Check if an array contains a certain value or not.
 
 Hint: Search the element in an array using algorithms. Also use numpy array.
-
 """
 
 import numpy as np

@@ -1,9 +1,9 @@
 """
-
 Power of a number
 
-Calculate the power of a number using recursion.
+Source: Common Interview Question
 
+Calculate the power of a number using recursion.
 """
 
 

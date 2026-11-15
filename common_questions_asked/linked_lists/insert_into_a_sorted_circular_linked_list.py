@@ -1,9 +1,9 @@
 """
-
 Insert into a Sorted Circular Linked List -
 
-Write a function to insert a new node into a sorted circular linked list.
+Source: Common Interview Question
 
+Write a function to insert a new node into a sorted circular linked list.
 """
 
 

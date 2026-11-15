@@ -1,9 +1,9 @@
 """
-
 Sum of Digits of a Positive Number
 
-Find out the sum of a positive integer number using recursion.
+Source: Common Interview Question
 
+Find out the sum of a positive integer number using recursion.
 """
 
 

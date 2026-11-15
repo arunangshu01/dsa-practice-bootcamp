@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 1672. Richest Customer Wealth
 
+Source: LeetCode
 """
 
 from typing import List

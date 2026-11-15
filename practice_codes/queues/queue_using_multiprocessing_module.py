@@ -1,3 +1,9 @@
+"""
+Queue Using Multiprocessing Module
+
+Source: Practice
+"""
+
 from multiprocessing import Queue
 
 if __name__ == "__main__":

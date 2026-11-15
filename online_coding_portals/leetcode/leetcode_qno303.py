@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 303. Range Sum Query - Immutable
 
+Source: LeetCode
 """
 
 from typing import List

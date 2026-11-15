@@ -1,9 +1,9 @@
 """
-
 Split a Circular Linked List into Two Equal Halves -
 
-Write a function to split the circular linked list into two equal halves. If the list has odd number of nodes, the extra node should go to the first list.
+Source: Common Interview Question
 
+Write a function to split the circular linked list into two equal halves. If the list has odd number of nodes, the extra node should go to the first list.
 """
 
 

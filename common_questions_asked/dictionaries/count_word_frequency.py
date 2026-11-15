@@ -1,6 +1,7 @@
 """
-
 Count Word Frequency
+
+Source: Common Interview Question
 
 Define a function to count the frequency of words in a given list of words.
 
@@ -10,7 +11,6 @@ Example:
 
 Output:
     {'apple': 3, 'orange': 2, 'banana': 1}
-
 """
 
 

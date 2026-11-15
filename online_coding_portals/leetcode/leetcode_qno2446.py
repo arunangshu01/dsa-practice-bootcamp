@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 2446. Determine if Two Events Have Conflict
 
+Source: LeetCode
 """
 
 from typing import List

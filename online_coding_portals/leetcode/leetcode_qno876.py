@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 876. Middle of the Linked List
 
+Source: LeetCode
 """
 
 from typing import Optional

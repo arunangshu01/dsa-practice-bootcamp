@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 14. Longest Common Prefix
 
+Source: LeetCode
 """
 
 from typing import List

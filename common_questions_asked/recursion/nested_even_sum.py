@@ -1,6 +1,7 @@
 """
-
 Nested Even Sum
+
+Source: Common Interview Question
 
 Write a recursive function called nestedEvenSum. Return the sum of all even numbers in an object which may contain
 nested objects.
@@ -28,7 +29,6 @@ Examples:
 
 nestedEvenSum(obj1) # 6
 nestedEvenSum(obj2) # 10
-
 """
 
 obj1 = {

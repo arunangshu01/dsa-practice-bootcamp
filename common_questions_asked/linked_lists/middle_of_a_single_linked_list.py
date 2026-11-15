@@ -1,10 +1,10 @@
 """
-
 Middle of a Singly Linked List -
+
+Source: Common Interview Question
 
 Write a function to find and return the middle node of a singly linked list. If the list has an even number of nodes,
 return the second of the two middle nodes.
-
 """
 
 

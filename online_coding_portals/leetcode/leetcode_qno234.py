@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 234. Palindrome Linked List
 
+Source: LeetCode
 """
 
 from typing import Optional

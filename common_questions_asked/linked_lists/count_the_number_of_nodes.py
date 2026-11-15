@@ -1,9 +1,9 @@
 """
-
 Count the Number of Nodes -
 
-Add a method to count the number of nodes in the circular singly linked list.
+Source: Common Interview Question
 
+Add a method to count the number of nodes in the circular singly linked list.
 """
 
 

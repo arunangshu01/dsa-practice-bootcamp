@@ -1,13 +1,13 @@
 """
-
 Reverse a Singly Linked List -
+
+Source: Common Interview Question
 
 Write a function to reverse a singly linked list. The function should reverse the original linked list.
 
 Example:
     Original singly linked list:   1 -> 2 -> 3 -> 4 -> 5
     Reversed singly linked list:  5 -> 4 -> 3 -> 2 -> 1
-
 """
 
 class Node:

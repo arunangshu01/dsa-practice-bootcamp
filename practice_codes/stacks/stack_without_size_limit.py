@@ -1,3 +1,9 @@
+"""
+Stack Without Size Limit
+
+Source: Practice
+"""
+
 from typing import List
 
 

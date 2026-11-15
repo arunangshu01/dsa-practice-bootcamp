@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 414. Third Maximum Number
 
+Source: LeetCode
 """
 
 from typing import List

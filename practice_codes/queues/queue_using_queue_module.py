@@ -1,3 +1,9 @@
+"""
+Queue Using Queue Module
+
+Source: Practice
+"""
+
 from queue import Queue
 
 if __name__ == "__main__":

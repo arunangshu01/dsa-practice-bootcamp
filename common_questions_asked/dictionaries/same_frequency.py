@@ -1,6 +1,7 @@
 """
-
 Same Frequency
+
+Source: Common Interview Question
 
 Define a function which takes two lists as parameters and check if two given lists have the same frequency of elements.
 
@@ -10,7 +11,6 @@ Example:
     check_same_frequency(list1, list2)
 
 Output: False
-
 """
 
 

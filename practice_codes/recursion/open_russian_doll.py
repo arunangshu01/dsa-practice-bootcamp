@@ -1,3 +1,9 @@
+"""
+Open Russian Doll
+
+Source: Practice
+"""
+
 def open_russian_doll(doll):
     if doll == 0:
         raise ValueError("There are no dolls to be opened.")

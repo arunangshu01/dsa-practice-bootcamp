@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 1051. Height Checker
 
+Source: LeetCode
 """
 
 from typing import List

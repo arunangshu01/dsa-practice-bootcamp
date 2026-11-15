@@ -1,9 +1,9 @@
 """
-
 Implement a Circular Singly Linked List -
 
-Create a circular singly linked list with methods to insert a new node at the beginning, end, and print to display the list.
+Source: Common Interview Question
 
+Create a circular singly linked list with methods to insert a new node at the beginning, end, and print to display the list.
 """
 
 

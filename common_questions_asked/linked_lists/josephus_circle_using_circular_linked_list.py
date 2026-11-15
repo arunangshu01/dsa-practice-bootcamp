@@ -1,12 +1,12 @@
 """
-
 Josephus Circle using Circular Linked List -
+
+Source: Common Interview Question
 
 Solve the Josephus problem using a circular linked list. Implement a function that takes the number of people n and the step rate k and
 returns the position of the last person standing.
 
 Output: Last person left standing: 3
-
 """
 
 

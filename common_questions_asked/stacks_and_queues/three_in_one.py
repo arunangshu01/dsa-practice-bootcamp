@@ -1,9 +1,9 @@
 """
-
 Three in One
 
-Describe how you could use a single Python list to implement three stacks.
+Source: Common Interview Question
 
+Describe how you could use a single Python list to implement three stacks.
 """
 
 

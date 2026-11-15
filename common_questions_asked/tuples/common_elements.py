@@ -1,6 +1,7 @@
 """
-
 Common Elements
+
+Source: Common Interview Question
 
 Write a function that takes two tuples and returns a tuple containing the common elements of the input tuples.
 
@@ -9,7 +10,6 @@ Example:
     tuple2 = (4, 5, 6, 7, 8)
     output_tuple = common_elements(tuple1, tuple2)
     print(output_tuple)  # Expected output: (4, 5)
-
 """
 
 

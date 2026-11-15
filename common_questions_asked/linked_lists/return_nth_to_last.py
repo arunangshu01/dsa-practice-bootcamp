@@ -1,9 +1,9 @@
 """
-
 Return Nth to Last
 
-Implement an algorithm to find the nth to last element of a singly linked list.
+Source: Common Interview Question
 
+Implement an algorithm to find the nth to last element of a singly linked list.
 """
 
 from linked_list_class import LinkedList

@@ -1,9 +1,9 @@
 """
-
 Sort Stack
 
-Sort a stack with the smallest on top using only a single temporary stack.
+Source: Common Interview Question
 
+Sort a stack with the smallest on top using only a single temporary stack.
 """
 
 

@@ -1,9 +1,9 @@
 """
-
 Greatest Common Divisor of two numbers
 
-Find the GCD (Greatest Common Divisor) of two numbers using recursion.
+Source: Common Interview Question
 
+Find the GCD (Greatest Common Divisor) of two numbers using recursion.
 """
 
 

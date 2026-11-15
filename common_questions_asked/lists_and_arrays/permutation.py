@@ -1,9 +1,9 @@
 """
-
 Permutation
 
-Check if two given two lists is permutation of each other or not.
+Source: Common Interview Question
 
+Check if two given two lists is permutation of each other or not.
 """
 
 

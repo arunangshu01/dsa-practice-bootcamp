@@ -1,6 +1,7 @@
 """
-
 Diagonal
+
+Source: Common Interview Question
 
 Create a function that takes a tuple of tuples and returns a tuple containing the diagonal elements of the input.
 
@@ -12,7 +13,6 @@ Example:
     )
     output_tuple = get_diagonal(input_tuple)
     print(output_tuple)  # Expected output: (1, 5, 9)
-
 """
 
 

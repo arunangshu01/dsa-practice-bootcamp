@@ -1,9 +1,9 @@
 """
-
 Delete a Node from a Circular Singly Linked List -
 
-Implement a method in the CircularLinkedList class to delete a node by value.
+Source: Common Interview Question
 
+Implement a method in the CircularLinkedList class to delete a node by value.
 """
 
 

@@ -1,9 +1,9 @@
 """
-
 Check if a Circular Linked List is Sorted -
 
-Implement a function to check if the circular linked list is sorted in ascending order.
+Source: Common Interview Question
 
+Implement a function to check if the circular linked list is sorted in ascending order.
 """
 
 

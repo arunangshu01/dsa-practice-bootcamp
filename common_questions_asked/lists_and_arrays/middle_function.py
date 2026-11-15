@@ -1,6 +1,7 @@
 """
-
 Middle Function
+
+Source: Common Interview Question
 
 Write a function called middle that takes a list and returns a new list that contains all but the
 first and last elements.
@@ -8,7 +9,6 @@ first and last elements.
 Example:
     myList = [1, 2, 3, 4]
     middle(myList)  # [2,3]
-
 """
 
 

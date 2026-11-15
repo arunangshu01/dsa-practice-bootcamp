@@ -1,12 +1,12 @@
 """
-
 Remove Duplicates from a Singly Linked List -
+
+Source: Common Interview Question
 
 Given a singly linked list, write a function that removes all the duplicates. use this linked list.
 
 Original Linked List - "1 -> 2 -> 4-> 3 -> 4->2"
 Result Linked List - "1 -> 2 -> 4 -> 3
-
 """
 
 

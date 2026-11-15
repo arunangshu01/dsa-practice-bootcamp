@@ -1,7 +1,7 @@
 """
-
 LeetCode Question: 1346. Check If N and Its Double Exist
 
+Source: LeetCode
 """
 
 from typing import List

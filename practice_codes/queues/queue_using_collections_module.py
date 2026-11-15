@@ -1,3 +1,9 @@
+"""
+Queue Using Collections Module
+
+Source: Practice
+"""
+
 from collections import deque
 
 if __name__ == "__main__":

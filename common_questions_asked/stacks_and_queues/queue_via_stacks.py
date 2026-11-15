@@ -1,9 +1,9 @@
 """
-
 Queue via Stacks
 
-Implement Queue class which implements a queue using two stacks.
+Source: Common Interview Question
 
+Implement Queue class which implements a queue using two stacks.
 """
 
 
