@@ -141,6 +141,12 @@ def write_page(category: str, topic_dir: Path, f: Path) -> Path:
         out.extend(f"    {line}".rstrip() for line in info["statement"].splitlines())
         out.append("")
     out.append(f"## Solution\n\n```python\n{source.rstrip()}\n```\n")
+    rel_src = f.relative_to(REPO_ROOT).as_posix()
+    out.append(
+        "---\n\n[:material-pencil: Edit this solution on GitHub]"
+        f"(https://github.com/arunangshu01/dsa-practice-bootcamp/blob/master/{rel_src})"
+        '{:target="_blank"}\n'
+    )
 
     page_dir = DOCS_DIR / category / topic_dir.name
     page_dir.mkdir(parents=True, exist_ok=True)

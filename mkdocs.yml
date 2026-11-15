@@ -2,7 +2,6 @@ site_name: DSA Practice Bootcamp
 site_description: Data Structures and Algorithms practice in Python
 site_url: https://arunangshu01.github.io/dsa-practice-bootcamp/
 repo_url: https://github.com/arunangshu01/dsa-practice-bootcamp
-edit_uri: blob/master/
 
 theme:
   name: material
@@ -22,7 +21,6 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
     - navigation.footer
 
 extra_css:
@@ -41,6 +39,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 ## NAV_START
 nav:
