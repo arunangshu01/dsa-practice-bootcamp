@@ -1,0 +1,115 @@
+/* Iron Man / J.A.R.V.I.S. theme overrides.
+   Dark "Jarvis" scheme: arc-reactor cyan on deep blue-black, gold accents.
+   Light "Stark" scheme: engineered white/steel with hot-rod red accents. */
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #00b8d9;
+  --md-primary-fg-color--light: #66e0ff;
+  --md-primary-fg-color--dark: #0077b6;
+  --md-accent-fg-color: #ffb703;
+  --md-accent-fg-color--transparent: #ffb7031a;
+  --md-default-bg-color: #050c1a;
+  --md-default-bg-color--light: #0b1930;
+  --md-default-bg-color--lighter: #122544;
+  --md-default-bg-color--lightest: #1a3157;
+  --md-code-bg-color: #0a1428;
+  --md-code-fg-color: #d8ecff;
+  --md-typeset-a-color: #4cc9f0;
+  --md-footer-bg-color: #030711;
+  --md-footer-bg-color--dark: #01040a;
+  --md-shadow-z1: 0 0 0.2rem #00b8d933;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #8c1c13;
+  --md-primary-fg-color--light: #b23a2a;
+  --md-primary-fg-color--dark: #6b0f08;
+  --md-accent-fg-color: #005f99;
+  --md-accent-fg-color--transparent: #005f991a;
+  --md-default-bg-color: #f6f8fb;
+  --md-typeset-a-color: #005f99;
+  --md-code-bg-color: #eef1f6;
+  --md-footer-bg-color: #8c1c13cc;
+  --md-footer-bg-color--dark: #6b0f08;
+}
+
+/* Arc-reactor glow on the site name / header accents. */
+.md-header__title .md-header__topic:first-child {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background: linear-gradient(90deg, #050c1a, #0b2a4a 60%, #050c1a);
+  border-bottom: 1px solid #00b8d955;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  background: linear-gradient(90deg, #6b0f08, #8c1c13 60%, #5a0c06);
+}
+
+/* Code blocks: Jarvis terminal feel in dark mode. */
+[data-md-color-scheme="slate"] .highlight {
+  border: 1px solid #00b8d926;
+  border-radius: 6px;
+}
+
+/* Difficulty-style badges and links hover glow. */
+[data-md-color-scheme="slate"] a:hover {
+  text-shadow: 0 0 0.4rem #00b8d966;
+}
+
+/* Last-updated line under page titles. */
+.last-updated {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.65;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+/* Metadata badges under page titles. */
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.7em;
+  margin: 0.15em 0.25em 0.15em 0;
+  border-radius: 1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.badge-easy   { background: #1b5e20; color: #c8f7c5; border: 1px solid #4caf50; }
+.badge-medium { background: #7a4d00; color: #ffe2a8; border: 1px solid #ffb703; }
+.badge-hard   { background: #7f1d1d; color: #ffc5c5; border: 1px solid #ef5350; }
+.badge-src    { background: #1a3157; color: #a8d8ff; border: 1px solid #4cc9f0; }
+
+[data-md-color-scheme="default"] .badge-easy   { background: #e8f5e9; color: #1b5e20; }
+[data-md-color-scheme="default"] .badge-medium { background: #fff3d6; color: #7a4d00; }
+[data-md-color-scheme="default"] .badge-hard   { background: #fdecea; color: #8c1c13; }
+[data-md-color-scheme="default"] .badge-src    { background: #e3f2fd; color: #005f99; }
+
+/* Device-friendly tweaks. */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+  .md-typeset pre > code {
+    font-size: 0.72rem;
+  }
+  .md-typeset table:not([class]) {
+    font-size: 0.75rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .badge {
+    font-size: 0.62rem;
+    padding: 0.12em 0.55em;
+  }
+  .md-header__title {
+    font-size: 0.85rem;
+  }
+}

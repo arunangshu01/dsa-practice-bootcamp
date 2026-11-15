@@ -2,21 +2,18 @@ site_name: DSA Practice Bootcamp
 site_description: Data Structures and Algorithms practice in Python
 site_url: https://arunangshu01.github.io/dsa-practice-bootcamp/
 repo_url: https://github.com/arunangshu01/dsa-practice-bootcamp
-edit_uri: blob/master/
 
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
     - scheme: slate
-      primary: indigo
       toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+        icon: material/lightbulb-on
+        name: Switch to Stark light mode
+    - scheme: default
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to Jarvis dark mode
   features:
     - navigation.sections
     - navigation.top
@@ -24,8 +21,10 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
-    - content.action.edit
     - navigation.footer
+
+extra_css:
+  - stylesheets/ironman.css
 
 plugins:
   - search
@@ -40,10 +39,14 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 ## NAV_START
 nav:
   - "Home": index.md
+  - "Tags": tags.md
   - Practice Codes:
       - "Overview": practice_codes/index.md
       - Linked Lists:
@@ -116,7 +119,7 @@ nav:
           - "Reverse Linked List": common_questions_asked/linked_lists/reverse_linked_list.md
           - "Split A Circular Linked List Into Two Equal Halves": common_questions_asked/linked_lists/split_a_circular_linked_list_into_two_equal_halves.md
           - "Sum Lists": common_questions_asked/linked_lists/sum_lists.md
-      - Lists And Arrays:
+      - Lists & Arrays:
           - "Overview": common_questions_asked/lists_and_arrays/index.md
           - "Best Score": common_questions_asked/lists_and_arrays/best_score.md
           - "Contains Duplicate": common_questions_asked/lists_and_arrays/contains_duplicate.md
@@ -150,7 +153,7 @@ nav:
           - "Some Recursive": common_questions_asked/recursion/some_recursive.md
           - "Stringify Numbers": common_questions_asked/recursion/stringify_numbers.md
           - "Sum Of Digits Of A Positive Number": common_questions_asked/recursion/sum_of_digits.md
-      - Stacks And Queues:
+      - Stacks & Queues:
           - "Overview": common_questions_asked/stacks_and_queues/index.md
           - "Animal Shelter": common_questions_asked/stacks_and_queues/animal_shelter.md
           - "Queue Via Stacks": common_questions_asked/stacks_and_queues/queue_via_stacks.md
@@ -165,7 +168,7 @@ nav:
           - "Diagonal": common_questions_asked/tuples/diagonal.md
           - "Elementwise Sum": common_questions_asked/tuples/elementwise_sum.md
           - "Insert At The Beginning": common_questions_asked/tuples/insert_at_the_beginning.md
-          - "Sum And Product": common_questions_asked/tuples/sum_and_product.md
+          - "Sum & Product": common_questions_asked/tuples/sum_and_product.md
   - Online Coding Portals:
       - "Overview": online_coding_portals/index.md
       - LeetCode:
@@ -175,12 +178,12 @@ nav:
           - "1089. Duplicate Zeros": online_coding_portals/leetcode/leetcode_qno1089.md
           - "118. Pascal's Triangle": online_coding_portals/leetcode/leetcode_qno118.md
           - "119. Pascal's Triangle II": online_coding_portals/leetcode/leetcode_qno119.md
-          - "121. Best Time To Buy And Sell Stock": online_coding_portals/leetcode/leetcode_qno121.md
+          - "121. Best Time To Buy & Sell Stock": online_coding_portals/leetcode/leetcode_qno121.md
           - "125. Valid Palindrome": online_coding_portals/leetcode/leetcode_qno125.md
           - "1295. Find Numbers With Even Number Of Digits": online_coding_portals/leetcode/leetcode_qno1295.md
           - "13. Roman To Integer": online_coding_portals/leetcode/leetcode_qno13.md
           - "1342. Number Of Steps To Reduce A Number To Zero": online_coding_portals/leetcode/leetcode_qno1342.md
-          - "1346. Check If N And Its Double Exist": online_coding_portals/leetcode/leetcode_qno1346.md
+          - "1346. Check If N & Its Double Exist": online_coding_portals/leetcode/leetcode_qno1346.md
           - "136. Single Number": online_coding_portals/leetcode/leetcode_qno136.md
           - "14. Longest Common Prefix": online_coding_portals/leetcode/leetcode_qno14.md
           - "1480. Running Sum Of 1D Array": online_coding_portals/leetcode/leetcode_qno1480.md
@@ -204,7 +207,7 @@ nav:
           - "303. Range Sum Query - Immutable": online_coding_portals/leetcode/leetcode_qno303.md
           - "326. Power Of Three": online_coding_portals/leetcode/leetcode_qno326.md
           - "33. Search In Rotated Sorted Array": online_coding_portals/leetcode/leetcode_qno33.md
-          - "34. Find First And Last Position Of Element In Sorted Array": online_coding_portals/leetcode/leetcode_qno34.md
+          - "34. Find First & Last Position Of Element In Sorted Array": online_coding_portals/leetcode/leetcode_qno34.md
           - "342. Power Of Four": online_coding_portals/leetcode/leetcode_qno342.md
           - "344. Reverse String": online_coding_portals/leetcode/leetcode_qno344.md
           - "35. Search Insert Position": online_coding_portals/leetcode/leetcode_qno35.md
@@ -229,4 +232,5 @@ nav:
           - "905. Sort Array By Parity": online_coding_portals/leetcode/leetcode_qno905.md
           - "941. Valid Mountain Array": online_coding_portals/leetcode/leetcode_qno941.md
           - "977. Squares Of A Sorted Array": online_coding_portals/leetcode/leetcode_qno977.md
+  - "Contributing": contributing.md
 ## NAV_END
