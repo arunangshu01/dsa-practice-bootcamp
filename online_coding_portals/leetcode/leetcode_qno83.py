@@ -1,6 +1,7 @@
 """
 LeetCode Question: 83. Remove Duplicates from Sorted List
 
+Difficulty: Easy
 Source: LeetCode
 """
 

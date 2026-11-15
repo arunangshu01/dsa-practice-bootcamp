@@ -1,6 +1,7 @@
 """
 LeetCode Question: 344. Reverse String
 
+Difficulty: Easy
 Source: LeetCode
 """
 

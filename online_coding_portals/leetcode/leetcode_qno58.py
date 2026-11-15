@@ -1,6 +1,7 @@
 """
 LeetCode Question: 58. Length of Last Word
 
+Difficulty: Easy
 Source: LeetCode
 """
 

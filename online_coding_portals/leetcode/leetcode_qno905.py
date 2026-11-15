@@ -1,6 +1,7 @@
 """
 LeetCode Question: 905. Sort Array By Parity
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 121. Best Time to Buy and Sell Stock
 
+Difficulty: Easy
 Source: LeetCode
 """
 

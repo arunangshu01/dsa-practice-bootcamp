@@ -1,6 +1,7 @@
 """
 LeetCode Question:  9. Palindrome Number
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,5 +1,5 @@
 """
-Merge Two Sorted Linked List -
+Merge Two Sorted Linked List
 
 Source: Common Interview Question
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 303. Range Sum Query - Immutable
 
+Difficulty: Easy
 Source: LeetCode
 """
 

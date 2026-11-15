@@ -1,6 +1,7 @@
 """
 LeetCode Question: 242. Valid Anagram
 
+Difficulty: Easy
 Source: LeetCode
 """
 

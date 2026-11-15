@@ -1,6 +1,7 @@
 """
 LeetCode Question: 414. Third Maximum Number
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 485. Max Consecutive Ones
 
+Difficulty: Easy
 Source: LeetCode
 """
 

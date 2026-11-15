@@ -1,6 +1,7 @@
 """
 LeetCode Question: 14. Longest Common Prefix
 
+Difficulty: Easy
 Source: LeetCode
 """
 

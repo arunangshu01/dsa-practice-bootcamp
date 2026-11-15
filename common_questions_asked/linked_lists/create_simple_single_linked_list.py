@@ -1,5 +1,5 @@
 """
-Create Simple Singly Linked List DS -
+Create Simple Singly Linked List DS
 
 Source: Common Interview Question
 

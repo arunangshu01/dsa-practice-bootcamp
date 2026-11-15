@@ -1,5 +1,5 @@
 """
-Delete a Node from a Circular Singly Linked List -
+Delete a Node from a Circular Singly Linked List
 
 Source: Common Interview Question
 

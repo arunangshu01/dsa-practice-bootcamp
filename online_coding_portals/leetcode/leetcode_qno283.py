@@ -1,6 +1,7 @@
 """
 LeetCode Question: 283. Move Zeroes
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 125. Valid Palindrome
 
+Difficulty: Easy
 Source: LeetCode
 """
 

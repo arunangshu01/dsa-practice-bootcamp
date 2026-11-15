@@ -1,6 +1,7 @@
 """
 LeetCode Question: 50. Pow(x, n)
 
+Difficulty: Medium
 Source: LeetCode
 """
 

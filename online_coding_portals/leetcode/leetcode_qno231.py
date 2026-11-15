@@ -1,6 +1,7 @@
 """
 LeetCode Question: 231. Power of Two
 
+Difficulty: Easy
 Source: LeetCode
 """
 

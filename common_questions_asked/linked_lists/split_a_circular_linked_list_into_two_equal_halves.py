@@ -1,5 +1,5 @@
 """
-Split a Circular Linked List into Two Equal Halves -
+Split a Circular Linked List into Two Equal Halves
 
 Source: Common Interview Question
 

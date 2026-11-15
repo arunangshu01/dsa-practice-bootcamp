@@ -1,6 +1,7 @@
 """
 LeetCode Question: 2446. Determine if Two Events Have Conflict
 
+Difficulty: Easy
 Source: LeetCode
 """
 

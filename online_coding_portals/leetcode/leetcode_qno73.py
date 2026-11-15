@@ -1,6 +1,7 @@
 """
 LeetCode Question: 73. Set Matrix Zeroes
 
+Difficulty: Medium
 Source: LeetCode
 """
 

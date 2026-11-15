@@ -1,6 +1,7 @@
 """
 LeetCode Question: 326. Power of Three
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,5 +1,5 @@
 """
-Palindrome Linked List -
+Palindrome Linked List
 
 Source: Common Interview Question
 

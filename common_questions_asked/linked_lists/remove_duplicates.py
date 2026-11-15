@@ -1,5 +1,5 @@
 """
-Remove Duplicates -
+Remove Duplicates
 
 Source: Common Interview Question
 

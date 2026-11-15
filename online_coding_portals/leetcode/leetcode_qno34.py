@@ -1,6 +1,7 @@
 """
 LeetCode Question: 34. Find First and Last Position of Element in Sorted Array
 
+Difficulty: Medium
 Source: LeetCode
 """
 

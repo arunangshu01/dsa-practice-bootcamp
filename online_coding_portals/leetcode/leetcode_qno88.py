@@ -1,6 +1,7 @@
 """
 LeetCode Question: 88. Merge Sorted Array
 
+Difficulty: Easy
 Source: LeetCode
 """
 

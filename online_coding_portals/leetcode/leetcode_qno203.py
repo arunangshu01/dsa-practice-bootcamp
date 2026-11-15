@@ -1,6 +1,7 @@
 """
 LeetCode Question: 203. Remove Linked List Elements
 
+Difficulty: Easy
 Source: LeetCode
 """
 

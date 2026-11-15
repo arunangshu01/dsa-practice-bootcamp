@@ -1,6 +1,7 @@
 """
 LeetCode Question: 234. Palindrome Linked List
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 217. Contains Duplicate
 
+Difficulty: Easy
 Source: LeetCode
 """
 

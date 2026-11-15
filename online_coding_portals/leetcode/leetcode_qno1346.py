@@ -1,6 +1,7 @@
 """
 LeetCode Question: 1346. Check If N and Its Double Exist
 
+Difficulty: Easy
 Source: LeetCode
 """
 

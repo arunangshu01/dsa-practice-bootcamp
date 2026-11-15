@@ -1,6 +1,7 @@
 """
 LeetCode Question: 206. Reverse Linked List
 
+Difficulty: Easy
 Source: LeetCode
 """
 

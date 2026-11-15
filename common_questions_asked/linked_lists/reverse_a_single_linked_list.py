@@ -1,5 +1,5 @@
 """
-Reverse a Singly Linked List -
+Reverse a Singly Linked List
 
 Source: Common Interview Question
 

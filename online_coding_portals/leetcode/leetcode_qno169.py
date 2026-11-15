@@ -1,6 +1,7 @@
 """
 LeetCode Question: 169. Majority Element
 
+Difficulty: Easy
 Source: LeetCode
 """
 

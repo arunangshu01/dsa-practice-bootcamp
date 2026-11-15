@@ -1,6 +1,7 @@
 """
-LeetCode Question: 391. Number of 1 Bits
+LeetCode Question: 191. Number of 1 Bits (Alternate Solution)
 
+Difficulty: Easy
 Source: LeetCode
 """
 

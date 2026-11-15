@@ -1,5 +1,5 @@
 """
-Middle of a Singly Linked List -
+Middle of a Singly Linked List
 
 Source: Common Interview Question
 

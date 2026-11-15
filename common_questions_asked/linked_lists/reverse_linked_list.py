@@ -1,5 +1,5 @@
 """
-Reverse Linked List -
+Reverse Linked List
 
 Source: Common Interview Question
 

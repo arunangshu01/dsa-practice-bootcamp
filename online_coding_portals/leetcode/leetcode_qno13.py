@@ -1,6 +1,7 @@
 """
 LeetCode Question: 13. Roman to Integer
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 66. Plus One
 
+Difficulty: Easy
 Source: LeetCode
 """
 

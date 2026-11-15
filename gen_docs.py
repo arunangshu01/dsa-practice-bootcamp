@@ -48,6 +48,8 @@ SPECIAL_CASES = {
     "dfs": "DFS",
     "bfs": "BFS",
     "qno": "Q.No.",
+    "fizzbuzz": "FizzBuzz",
+    "ds": "DS",
     "ii": "II",
     "iii": "III",
     "iv": "IV",
@@ -64,12 +66,12 @@ def titleize(name: str) -> str:
     return " ".join(out)
 
 
-LEETCODE_PREFIX = re.compile(r"(?i)^leetcode question:\s*(\d+)\.?\s*(.*)$")
+LEETCODE_PREFIX = re.compile(r"(?i)^leetcode question:?\s*(\d+)[\.:]?\s*(.*)$")
 
 
 def clean_title(raw: str, fallback: str) -> str:
     """Normalize a docstring title into a consistent display title."""
-    title = " ".join(raw.split())
+    title = " ".join(raw.split()).rstrip(" -")
     m = LEETCODE_PREFIX.match(title)
     if m:
         return f"{m.group(1)}. {titleize(m.group(2))}"

@@ -1,5 +1,5 @@
 """
-Check if a Circular Linked List is Sorted -
+Check if a Circular Linked List is Sorted
 
 Source: Common Interview Question
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 26. Remove Duplicates from Sorted Array
 
+Difficulty: Easy
 Source: LeetCode
 """
 

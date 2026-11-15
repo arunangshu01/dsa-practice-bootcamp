@@ -1,5 +1,5 @@
 """
-Deletion from a Singly Linked List -
+Deletion from a Singly Linked List
 
 Source: Common Interview Question
 

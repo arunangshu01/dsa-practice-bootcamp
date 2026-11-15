@@ -1,6 +1,7 @@
 """
 LeetCode Question: 33. Search in Rotated Sorted Array
 
+Difficulty: Medium
 Source: LeetCode
 """
 

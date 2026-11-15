@@ -1,6 +1,7 @@
 """
 LeetCode Question: 67. Add Binary
 
+Difficulty: Easy
 Source: LeetCode
 """
 

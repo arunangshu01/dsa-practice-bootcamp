@@ -1,6 +1,7 @@
 """
-LeetCode Question:  412. Two Sum
+LeetCode Question: 412. FizzBuzz
 
+Difficulty: Easy
 Source: LeetCode
 """
 

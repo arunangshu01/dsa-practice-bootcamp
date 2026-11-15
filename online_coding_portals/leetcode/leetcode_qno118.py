@@ -1,6 +1,7 @@
 """
 LeetCode Question: 118. Pascal's Triangle
 
+Difficulty: Easy
 Source: LeetCode
 """
 

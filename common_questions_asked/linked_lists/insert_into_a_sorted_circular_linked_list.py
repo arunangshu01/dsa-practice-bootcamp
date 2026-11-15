@@ -1,5 +1,5 @@
 """
-Insert into a Sorted Circular Linked List -
+Insert into a Sorted Circular Linked List
 
 Source: Common Interview Question
 

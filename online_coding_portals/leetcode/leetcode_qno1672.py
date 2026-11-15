@@ -1,6 +1,7 @@
 """
 LeetCode Question: 1672. Richest Customer Wealth
 
+Difficulty: Easy
 Source: LeetCode
 """
 

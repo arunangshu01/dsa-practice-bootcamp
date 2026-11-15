@@ -1,5 +1,5 @@
 """
-Josephus Circle using Circular Linked List -
+Josephus Circle using Circular Linked List
 
 Source: Common Interview Question
 

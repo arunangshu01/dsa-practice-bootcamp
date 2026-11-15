@@ -1,6 +1,7 @@
 """
 LeetCode Question: 4. Median of Two Sorted Arrays
 
+Difficulty: Hard
 Source: LeetCode
 """
 

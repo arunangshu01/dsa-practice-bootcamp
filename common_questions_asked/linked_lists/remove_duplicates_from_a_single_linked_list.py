@@ -1,5 +1,5 @@
 """
-Remove Duplicates from a Singly Linked List -
+Remove Duplicates from a Singly Linked List
 
 Source: Common Interview Question
 

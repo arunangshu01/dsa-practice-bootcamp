@@ -1,6 +1,7 @@
 """
 LeetCode Question: 383. Ransom Note
 
+Difficulty: Easy
 Source: LeetCode
 """
 

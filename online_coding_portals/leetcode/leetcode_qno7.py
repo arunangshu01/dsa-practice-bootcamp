@@ -1,6 +1,7 @@
 """
 LeetCode Question: 7. Reverse Integer
 
+Difficulty: Medium
 Source: LeetCode
 """
 

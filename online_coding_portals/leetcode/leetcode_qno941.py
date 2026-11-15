@@ -1,6 +1,7 @@
 """
 LeetCode Question: 941. Valid Mountain Array
 
+Difficulty: Easy
 Source: LeetCode
 """
 

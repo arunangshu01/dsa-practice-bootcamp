@@ -1,6 +1,7 @@
 """
 LeetCode Question: 27. Remove Element
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 69. Sqrt(x)
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 342. Power of Four
 
+Difficulty: Easy
 Source: LeetCode
 """
 

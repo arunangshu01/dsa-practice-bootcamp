@@ -1,5 +1,5 @@
 """
-Implement a Circular Singly Linked List -
+Implement a Circular Singly Linked List
 
 Source: Common Interview Question
 

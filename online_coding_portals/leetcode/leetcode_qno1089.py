@@ -1,6 +1,7 @@
 """
 LeetCode Question: 1089. Duplicate Zeros
 
+Difficulty: Easy
 Source: LeetCode
 """
 

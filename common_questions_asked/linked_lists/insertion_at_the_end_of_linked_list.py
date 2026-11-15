@@ -1,5 +1,5 @@
 """
-Insertion at the End of a Singly Linked List -
+Insertion at the End of a Singly Linked List
 
 Source: Common Interview Question
 

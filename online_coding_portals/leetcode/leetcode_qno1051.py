@@ -1,6 +1,7 @@
 """
 LeetCode Question: 1051. Height Checker
 
+Difficulty: Easy
 Source: LeetCode
 """
 

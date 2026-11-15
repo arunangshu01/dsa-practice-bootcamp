@@ -1,6 +1,7 @@
 """
 LeetCode Question: 876. Middle of the Linked List
 
+Difficulty: Easy
 Source: LeetCode
 """
 

@@ -1,6 +1,7 @@
 """
 LeetCode Question: 48. Rotate Image
 
+Difficulty: Medium
 Source: LeetCode
 """
 

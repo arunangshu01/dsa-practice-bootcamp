@@ -1,5 +1,5 @@
 """
-Count the Number of Nodes -
+Count the Number of Nodes
 
 Source: Common Interview Question
 

@@ -1,5 +1,5 @@
 """
-Insertion at the Beginning of a Singly Linked List -
+Insertion at the Beginning of a Singly Linked List
 
 Source: Common Interview Question
 

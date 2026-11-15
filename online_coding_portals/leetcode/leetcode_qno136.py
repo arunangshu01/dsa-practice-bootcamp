@@ -1,6 +1,7 @@
 """
 LeetCode Question: 136. Single Number
 
+Difficulty: Easy
 Source: LeetCode
 """
 
