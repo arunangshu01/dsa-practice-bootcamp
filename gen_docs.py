@@ -35,6 +35,10 @@ CATEGORIES = [
 
 START_MARKER = "<!-- INDEX_START -->"
 END_MARKER = "<!-- INDEX_END -->"
+
+MKDOCS_YML = REPO_ROOT / "mkdocs.yml"
+NAV_START = "## NAV_START"
+NAV_END = "## NAV_END"
 METADATA_KEYS = ("difficulty", "source", "link")
 
 
@@ -173,6 +177,55 @@ def write_section_indexes() -> None:
         (cat_docs / "index.md").write_text("\n".join(cat_lines) + "\n")
 
 
+def build_nav() -> list:
+    """Build the mkdocs nav tree so sidebar labels use our titles."""
+    nav = [{"Home": "index.md"}]
+    for category in CATEGORIES:
+        cat_docs = DOCS_DIR / category
+        if not cat_docs.is_dir():
+            continue
+        section = [{"Overview": f"{category}/index.md"}]
+        for topic_dir in sorted(p for p in cat_docs.iterdir() if p.is_dir()):
+            pages = []
+            for page in sorted(topic_dir.glob("*.md")):
+                rel = page.relative_to(DOCS_DIR).as_posix()
+                if page.stem == "index":
+                    pages.insert(0, {"Overview": rel})
+                    continue
+                info = parse_docstring(
+                    (REPO_ROOT / category / topic_dir.name / f"{page.stem}.py")
+                    .read_text(encoding="utf-8")
+                )
+                pages.append({clean_title(info["title"], page.stem): rel})
+            section.append({titleize(topic_dir.name): pages})
+        nav.append({titleize(category): section})
+    return nav
+
+
+def _nav_yaml(items: list, indent: int) -> list:
+    lines = []
+    pad = " " * indent
+    for item in items:
+        for title, value in item.items():
+            if isinstance(value, str):
+                lines.append(f'{pad}- "{title}": {value}')
+            else:
+                lines.append(f"{pad}- {title}:")
+                lines.extend(_nav_yaml(value, indent + 4))
+    return lines
+
+
+def update_mkdocs_nav() -> None:
+    nav_yaml = "\n".join(_nav_yaml(build_nav(), 2))
+    block = f"{NAV_START}\nnav:\n{nav_yaml}\n{NAV_END}"
+    yml = MKDOCS_YML.read_text()
+    if NAV_START in yml and NAV_END in yml:
+        yml = yml.split(NAV_START)[0] + block + yml.split(NAV_END)[1]
+    else:
+        yml = yml.rstrip() + "\n\n" + block + "\n"
+    MKDOCS_YML.write_text(yml)
+
+
 def write_homepage(counts: dict) -> None:
     lines = [
         "# DSA Practice Bootcamp\n",
@@ -224,6 +277,7 @@ def main() -> None:
         counts[category] = counts.get(category, 0) + 1
     write_section_indexes()
     write_homepage(counts)
+    update_mkdocs_nav()
     update_readme_index()
     print(f"Generated docs for {sum(counts.values())} files")
 

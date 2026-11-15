@@ -40,3 +40,193 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.snippets
+
+## NAV_START
+nav:
+  - "Home": index.md
+  - Practice Codes:
+      - "Overview": practice_codes/index.md
+      - Linked Lists:
+          - "Overview": practice_codes/linked_lists/index.md
+          - "Circular Double Linked List": practice_codes/linked_lists/circular_double_linked_list.md
+          - "Circular Single Linked List": practice_codes/linked_lists/circular_single_linked_list.md
+          - "Double Linked List": practice_codes/linked_lists/double_linked_list.md
+          - "Single Linked List": practice_codes/linked_lists/single_linked_list.md
+      - Queues:
+          - "Overview": practice_codes/queues/index.md
+          - "Queue Using Collections Module": practice_codes/queues/queue_using_collections_module.md
+          - "Queue Using Linked List": practice_codes/queues/queue_using_linked_list.md
+          - "Queue Using Multiprocessing Module": practice_codes/queues/queue_using_multiprocessing_module.md
+          - "Queue Using Queue Module": practice_codes/queues/queue_using_queue_module.md
+          - "Queue With Size Limit Circular Queue": practice_codes/queues/queue_with_size_limit_circular_queue.md
+          - "Queue Without Size Limit": practice_codes/queues/queue_without_size_limit.md
+      - Recursion:
+          - "Overview": practice_codes/recursion/index.md
+          - "Factorial": practice_codes/recursion/factorial.md
+          - "Fibonacci": practice_codes/recursion/fibonacci.md
+          - "Open Russian Doll": practice_codes/recursion/open_russian_doll.md
+          - "Power Of Two": practice_codes/recursion/power_of_two.md
+      - Stacks:
+          - "Overview": practice_codes/stacks/index.md
+          - "Stack Using Linked List": practice_codes/stacks/stack_using_linked_list.md
+          - "Stack With Size Limit": practice_codes/stacks/stack_with_size_limit.md
+          - "Stack Without Size Limit": practice_codes/stacks/stack_without_size_limit.md
+      - Trees:
+          - "Overview": practice_codes/trees/index.md
+          - "AVL Tree Using Linked List": practice_codes/trees/avl_tree_using_linked_list.md
+          - "Basic Tree": practice_codes/trees/basic_tree.md
+          - "Binary Search Tree Using Linked List": practice_codes/trees/binary_search_tree_using_linked_list.md
+          - "Binary Tree Using Linked List": practice_codes/trees/binary_tree_using_linked_list.md
+          - "Binary Tree Using Python List": practice_codes/trees/binary_tree_using_python_list.md
+  - Common Questions Asked:
+      - "Overview": common_questions_asked/index.md
+      - Dictionaries:
+          - "Overview": common_questions_asked/dictionaries/index.md
+          - "Common Keys": common_questions_asked/dictionaries/common_keys.md
+          - "Conditional Filter": common_questions_asked/dictionaries/conditional_filter.md
+          - "Count Word Frequency": common_questions_asked/dictionaries/count_word_frequency.md
+          - "Key With The Highest Value": common_questions_asked/dictionaries/key_with_the_highest_value.md
+          - "Reverse Key-Value Pairs": common_questions_asked/dictionaries/reverse_key_value_pairs.md
+          - "Same Frequency": common_questions_asked/dictionaries/same_frequency.md
+      - Linked Lists:
+          - "Overview": common_questions_asked/linked_lists/index.md
+          - "Check If A Circular Linked List Is Sorted": common_questions_asked/linked_lists/check_if_a_circular_linked_list_is_sorted.md
+          - "Count The Number Of Nodes": common_questions_asked/linked_lists/count_the_number_of_nodes.md
+          - "Create Simple Singly Linked List DS": common_questions_asked/linked_lists/create_simple_single_linked_list.md
+          - "Delete A Node From A Circular Singly Linked List": common_questions_asked/linked_lists/delete_a_node_from_a_circular_linked_list.md
+          - "Deletion From A Singly Linked List": common_questions_asked/linked_lists/deletion_from_a_single_linked_list.md
+          - "Implement A Circular Singly Linked List": common_questions_asked/linked_lists/implement_circular_single_linked_list.md
+          - "Insert Into A Sorted Circular Linked List": common_questions_asked/linked_lists/insert_into_a_sorted_circular_linked_list.md
+          - "Insertion At The Beginning Of A Singly Linked List": common_questions_asked/linked_lists/insertion_at_the_beginning_of_linked_list.md
+          - "Insertion At The End Of A Singly Linked List": common_questions_asked/linked_lists/insertion_at_the_end_of_linked_list.md
+          - "Intersection": common_questions_asked/linked_lists/intersection.md
+          - "Josephus Circle Using Circular Linked List": common_questions_asked/linked_lists/josephus_circle_using_circular_linked_list.md
+          - "Create A Custom Linked List Class": common_questions_asked/linked_lists/linked_list_class.md
+          - "Merge Two Sorted Linked List": common_questions_asked/linked_lists/merge_two_sorted_linked_lists.md
+          - "Middle Of A Singly Linked List": common_questions_asked/linked_lists/middle_of_a_single_linked_list.md
+          - "Middle Of The Linked List": common_questions_asked/linked_lists/middle_of_the_linked_list.md
+          - "Palindrome Linked List": common_questions_asked/linked_lists/palindrome_linked_list.md
+          - "Partition": common_questions_asked/linked_lists/partition.md
+          - "Remove Duplicates": common_questions_asked/linked_lists/remove_duplicates.md
+          - "Remove Duplicates": common_questions_asked/linked_lists/remove_duplicates_custom.md
+          - "Remove Duplicates From A Singly Linked List": common_questions_asked/linked_lists/remove_duplicates_from_a_single_linked_list.md
+          - "Remove Linked List Elements": common_questions_asked/linked_lists/remove_linked_list_elements.md
+          - "Return Nth To Last": common_questions_asked/linked_lists/return_nth_to_last.md
+          - "Reverse A Singly Linked List": common_questions_asked/linked_lists/reverse_a_single_linked_list.md
+          - "Reverse Linked List": common_questions_asked/linked_lists/reverse_linked_list.md
+          - "Split A Circular Linked List Into Two Equal Halves": common_questions_asked/linked_lists/split_a_circular_linked_list_into_two_equal_halves.md
+          - "Sum Lists": common_questions_asked/linked_lists/sum_lists.md
+      - Lists And Arrays:
+          - "Overview": common_questions_asked/lists_and_arrays/index.md
+          - "Best Score": common_questions_asked/lists_and_arrays/best_score.md
+          - "Contains Duplicate": common_questions_asked/lists_and_arrays/contains_duplicate.md
+          - "Duplicate Number": common_questions_asked/lists_and_arrays/duplicate_number.md
+          - "Find A Number In An Array.": common_questions_asked/lists_and_arrays/find_element_in_an_array.md
+          - "Max Product Of Two Integers": common_questions_asked/lists_and_arrays/max_product_of_two_integers.md
+          - "Middle Function": common_questions_asked/lists_and_arrays/middle_function.md
+          - "Missing Number": common_questions_asked/lists_and_arrays/missing_number.md
+          - "Pairs": common_questions_asked/lists_and_arrays/pairs.md
+          - "Permutation": common_questions_asked/lists_and_arrays/permutation.md
+          - "Rotate Matrix / Image - LeetCode 4848": common_questions_asked/lists_and_arrays/rotate_matrix_image.md
+          - "Pairs / Two Sum": common_questions_asked/lists_and_arrays/two_sum.md
+          - "2D Lists": common_questions_asked/lists_and_arrays/twod_lists.md
+      - Recursion:
+          - "Overview": common_questions_asked/recursion/index.md
+          - "Capitalize First": common_questions_asked/recursion/capitalize_first.md
+          - "Capitalize Words": common_questions_asked/recursion/capitalize_words.md
+          - "Collect Strings": common_questions_asked/recursion/collect_strings.md
+          - "Decimal To Binary": common_questions_asked/recursion/decimal_to_binary.md
+          - "Factorial": common_questions_asked/recursion/factorial.md
+          - "Fib": common_questions_asked/recursion/fib.md
+          - "Flatten": common_questions_asked/recursion/flatten.md
+          - "Greatest Common Divisor Of Two Numbers": common_questions_asked/recursion/gcd_of_two_numbers.md
+          - "Is Palindrome": common_questions_asked/recursion/is_palindrome.md
+          - "Nested Even Sum": common_questions_asked/recursion/nested_even_sum.md
+          - "Power": common_questions_asked/recursion/power.md
+          - "Power Of A Number": common_questions_asked/recursion/power_of_number.md
+          - "Product Of Array": common_questions_asked/recursion/product_of_array.md
+          - "Recursive Range": common_questions_asked/recursion/recursive_range.md
+          - "Reverse": common_questions_asked/recursion/reverse.md
+          - "Some Recursive": common_questions_asked/recursion/some_recursive.md
+          - "Stringify Numbers": common_questions_asked/recursion/stringify_numbers.md
+          - "Sum Of Digits Of A Positive Number": common_questions_asked/recursion/sum_of_digits.md
+      - Stacks And Queues:
+          - "Overview": common_questions_asked/stacks_and_queues/index.md
+          - "Animal Shelter": common_questions_asked/stacks_and_queues/animal_shelter.md
+          - "Queue Via Stacks": common_questions_asked/stacks_and_queues/queue_via_stacks.md
+          - "Sort Stack": common_questions_asked/stacks_and_queues/sort_stack.md
+          - "Stack Minimum": common_questions_asked/stacks_and_queues/stack_minimum.md
+          - "Stack Of Plates": common_questions_asked/stacks_and_queues/stack_of_plates.md
+          - "Three In One": common_questions_asked/stacks_and_queues/three_in_one.md
+      - Tuples:
+          - "Overview": common_questions_asked/tuples/index.md
+          - "Common Elements": common_questions_asked/tuples/common_elements.md
+          - "Concatenate": common_questions_asked/tuples/concatenate.md
+          - "Diagonal": common_questions_asked/tuples/diagonal.md
+          - "Elementwise Sum": common_questions_asked/tuples/elementwise_sum.md
+          - "Insert At The Beginning": common_questions_asked/tuples/insert_at_the_beginning.md
+          - "Sum And Product": common_questions_asked/tuples/sum_and_product.md
+  - Online Coding Portals:
+      - "Overview": online_coding_portals/index.md
+      - LeetCode:
+          - "Overview": online_coding_portals/leetcode/index.md
+          - "1. Two Sum": online_coding_portals/leetcode/leetcode_qno1.md
+          - "1051. Height Checker": online_coding_portals/leetcode/leetcode_qno1051.md
+          - "1089. Duplicate Zeros": online_coding_portals/leetcode/leetcode_qno1089.md
+          - "118. Pascal's Triangle": online_coding_portals/leetcode/leetcode_qno118.md
+          - "119. Pascal's Triangle II": online_coding_portals/leetcode/leetcode_qno119.md
+          - "121. Best Time To Buy And Sell Stock": online_coding_portals/leetcode/leetcode_qno121.md
+          - "125. Valid Palindrome": online_coding_portals/leetcode/leetcode_qno125.md
+          - "1295. Find Numbers With Even Number Of Digits": online_coding_portals/leetcode/leetcode_qno1295.md
+          - "13. Roman To Integer": online_coding_portals/leetcode/leetcode_qno13.md
+          - "1342. Number Of Steps To Reduce A Number To Zero": online_coding_portals/leetcode/leetcode_qno1342.md
+          - "1346. Check If N And Its Double Exist": online_coding_portals/leetcode/leetcode_qno1346.md
+          - "136. Single Number": online_coding_portals/leetcode/leetcode_qno136.md
+          - "14. Longest Common Prefix": online_coding_portals/leetcode/leetcode_qno14.md
+          - "1480. Running Sum Of 1D Array": online_coding_portals/leetcode/leetcode_qno1480.md
+          - "153. Find Minimum In Rotated Sorted Array": online_coding_portals/leetcode/leetcode_qno153.md
+          - "1672. Richest Customer Wealth": online_coding_portals/leetcode/leetcode_qno1672.md
+          - "169. Majority Element": online_coding_portals/leetcode/leetcode_qno169.md
+          - "191. Number Of 11 Bits": online_coding_portals/leetcode/leetcode_qno191.md
+          - "203. Remove Linked List Elements": online_coding_portals/leetcode/leetcode_qno203.md
+          - "206. Reverse Linked List": online_coding_portals/leetcode/leetcode_qno206.md
+          - "21. Merge Two Sorted Lists": online_coding_portals/leetcode/leetcode_qno21.md
+          - "217. Contains Duplicate": online_coding_portals/leetcode/leetcode_qno217.md
+          - "231. Power Of Two": online_coding_portals/leetcode/leetcode_qno231.md
+          - "234. Palindrome Linked List": online_coding_portals/leetcode/leetcode_qno234.md
+          - "238. Product Of Array Except Self": online_coding_portals/leetcode/leetcode_qno238.md
+          - "242. Valid Anagram": online_coding_portals/leetcode/leetcode_qno242.md
+          - "2446. Determine If Two Events Have Conflict": online_coding_portals/leetcode/leetcode_qno2446.md
+          - "26. Remove Duplicates From Sorted Array": online_coding_portals/leetcode/leetcode_qno26.md
+          - "27. Remove Element": online_coding_portals/leetcode/leetcode_qno27.md
+          - "28. Find The Index Of The First Occurrence In A String": online_coding_portals/leetcode/leetcode_qno28.md
+          - "283. Move Zeroes": online_coding_portals/leetcode/leetcode_qno283.md
+          - "303. Range Sum Query - Immutable": online_coding_portals/leetcode/leetcode_qno303.md
+          - "326. Power Of Three": online_coding_portals/leetcode/leetcode_qno326.md
+          - "33. Search In Rotated Sorted Array": online_coding_portals/leetcode/leetcode_qno33.md
+          - "34. Find First And Last Position Of Element In Sorted Array": online_coding_portals/leetcode/leetcode_qno34.md
+          - "342. Power Of Four": online_coding_portals/leetcode/leetcode_qno342.md
+          - "344. Reverse String": online_coding_portals/leetcode/leetcode_qno344.md
+          - "35. Search Insert Position": online_coding_portals/leetcode/leetcode_qno35.md
+          - "383. Ransom Note": online_coding_portals/leetcode/leetcode_qno383.md
+          - "191. Number Of 11 Bits (Alternate Solution)": online_coding_portals/leetcode/leetcode_qno391.md
+          - "4. Median Of Two Sorted Arrays": online_coding_portals/leetcode/leetcode_qno4.md
+          - "412. FizzBuzz": online_coding_portals/leetcode/leetcode_qno412.md
+          - "414. Third Maximum Number": online_coding_portals/leetcode/leetcode_qno414.md
+          - "48. Rotate Image": online_coding_portals/leetcode/leetcode_qno48.md
+          - "485. Max Consecutive Ones": online_coding_portals/leetcode/leetcode_qno485.md
+          - "50. Pow(X, N)": online_coding_portals/leetcode/leetcode_qno50.md
+          - "58. Length Of Last Word": online_coding_portals/leetcode/leetcode_qno58.md
+          - "66. Plus One": online_coding_portals/leetcode/leetcode_qno66.md
+          - "67. Add Binary": online_coding_portals/leetcode/leetcode_qno67.md
+          - "69. Sqrt(X)": online_coding_portals/leetcode/leetcode_qno69.md
+          - "7. Reverse Integer": online_coding_portals/leetcode/leetcode_qno7.md
+          - "73. Set Matrix Zeroes": online_coding_portals/leetcode/leetcode_qno73.md
+          - "83. Remove Duplicates From Sorted List": online_coding_portals/leetcode/leetcode_qno83.md
+          - "876. Middle Of The Linked List": online_coding_portals/leetcode/leetcode_qno876.md
+          - "88. Merge Sorted Array": online_coding_portals/leetcode/leetcode_qno88.md
+          - "9. Palindrome Number": online_coding_portals/leetcode/leetcode_qno9.md
+          - "905. Sort Array By Parity": online_coding_portals/leetcode/leetcode_qno905.md
+          - "941. Valid Mountain Array": online_coding_portals/leetcode/leetcode_qno941.md
+          - "977. Squares Of A Sorted Array": online_coding_portals/leetcode/leetcode_qno977.md
+## NAV_END
