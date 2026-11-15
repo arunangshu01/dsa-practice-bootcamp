@@ -58,3 +58,58 @@
 [data-md-color-scheme="slate"] a:hover {
   text-shadow: 0 0 0.4rem #00b8d966;
 }
+
+/* Last-updated line under page titles. */
+.last-updated {
+  display: block;
+  font-size: 0.68rem;
+  opacity: 0.65;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.6rem;
+}
+
+/* Metadata badges under page titles. */
+.badge {
+  display: inline-block;
+  padding: 0.15em 0.7em;
+  margin: 0.15em 0.25em 0.15em 0;
+  border-radius: 1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.badge-easy   { background: #1b5e20; color: #c8f7c5; border: 1px solid #4caf50; }
+.badge-medium { background: #7a4d00; color: #ffe2a8; border: 1px solid #ffb703; }
+.badge-hard   { background: #7f1d1d; color: #ffc5c5; border: 1px solid #ef5350; }
+.badge-src    { background: #1a3157; color: #a8d8ff; border: 1px solid #4cc9f0; }
+
+[data-md-color-scheme="default"] .badge-easy   { background: #e8f5e9; color: #1b5e20; }
+[data-md-color-scheme="default"] .badge-medium { background: #fff3d6; color: #7a4d00; }
+[data-md-color-scheme="default"] .badge-hard   { background: #fdecea; color: #8c1c13; }
+[data-md-color-scheme="default"] .badge-src    { background: #e3f2fd; color: #005f99; }
+
+/* Device-friendly tweaks. */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset h1 {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+  .md-typeset pre > code {
+    font-size: 0.72rem;
+  }
+  .md-typeset table:not([class]) {
+    font-size: 0.75rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .badge {
+    font-size: 0.62rem;
+    padding: 0.12em 0.55em;
+  }
+  .md-header__title {
+    font-size: 0.85rem;
+  }
+}

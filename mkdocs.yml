@@ -46,6 +46,7 @@ markdown_extensions:
 ## NAV_START
 nav:
   - "Home": index.md
+  - "Tags": tags.md
   - Practice Codes:
       - "Overview": practice_codes/index.md
       - Linked Lists:
@@ -231,4 +232,5 @@ nav:
           - "905. Sort Array By Parity": online_coding_portals/leetcode/leetcode_qno905.md
           - "941. Valid Mountain Array": online_coding_portals/leetcode/leetcode_qno941.md
           - "977. Squares Of A Sorted Array": online_coding_portals/leetcode/leetcode_qno977.md
+  - "Contributing": contributing.md
 ## NAV_END
