@@ -19,8 +19,11 @@ Docstring convention (all fields optional — first line is the title):
 """
 
 import ast
+import os
 import re
 import shutil
+import subprocess
+import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).parent
@@ -119,6 +122,33 @@ def parse_docstring(source: str) -> dict:
     return info
 
 
+EXEC_TIMEOUT = 5  # seconds per file
+MAX_OUTPUT = 3000
+
+
+def execute_solution(f: Path) -> str:
+    """Run a solution file and capture its stdout/stderr (None if skipped)."""
+    if os.environ.get("GEN_NO_EXEC"):
+        return ""
+    try:
+        result = subprocess.run(
+            [sys.executable, f.name],
+            cwd=f.parent,
+            capture_output=True,
+            text=True,
+            timeout=EXEC_TIMEOUT,
+            env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"},
+        )
+    except subprocess.TimeoutExpired:
+        return "(execution timed out)"
+    output = (result.stdout + result.stderr).strip()
+    if not output:
+        return ""  # nothing worth showing (e.g. class-only solutions)
+    if len(output) > MAX_OUTPUT:
+        output = output[:MAX_OUTPUT] + "\n... (truncated)"
+    return output
+
+
 def write_page(category: str, topic_dir: Path, f: Path) -> Path:
     """Emit a markdown page for one solution file; returns the page path."""
     source = f.read_text(encoding="utf-8")
@@ -141,6 +171,12 @@ def write_page(category: str, topic_dir: Path, f: Path) -> Path:
         out.extend(f"    {line}".rstrip() for line in info["statement"].splitlines())
         out.append("")
     out.append(f"## Solution\n\n```python\n{source.rstrip()}\n```\n")
+    run_output = execute_solution(f)
+    if run_output:
+        out.append('??? terminal "Output"\n')
+        out.append("    ```text")
+        out.extend(f"    {line}" for line in run_output.splitlines())
+        out.append("    ```\n")
     rel_src = f.relative_to(REPO_ROOT).as_posix()
     out.append(
         "---\n\n[:material-pencil: Edit this solution on GitHub]"
