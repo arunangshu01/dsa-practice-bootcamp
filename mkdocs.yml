@@ -2,7 +2,7 @@ site_name: DSA Practice Bootcamp
 site_description: Data Structures and Algorithms practice in Python
 site_url: https://arunangshu01.github.io/dsa-practice-bootcamp/
 repo_url: https://github.com/arunangshu01/dsa-practice-bootcamp
-copyright: Built with :material-heart: by Arunangshu Pramanik
+copyright: 'Built with :material-heart: by Arunangshu Pramanik'
 
 theme:
   name: material
