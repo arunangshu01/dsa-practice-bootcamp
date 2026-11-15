@@ -2,6 +2,9 @@
 
 Pairs / Two Sum
 
+Difficulty: Easy
+Source: Common Interview Question
+
 Write a program to find all pairs of integers whose sum is equal to a given number. Find the results based on both the
 following protocols -
 

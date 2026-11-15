@@ -1,3 +1,15 @@
+"""Factorial
+
+Difficulty: Easy
+Source: Practice
+
+Compute the factorial of a non-negative integer using recursion.
+
+Example:
+    Input: 5
+    Output: 120
+"""
+
 import sys
 sys.setrecursionlimit(1000)
 
