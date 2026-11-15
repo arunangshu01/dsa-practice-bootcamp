@@ -345,6 +345,7 @@ def write_homepage(entries: list) -> None:
             )
     lines.append("\n---\n\nBrowse via the sidebar, the "
                  "[Tags](tags.md) page, or the search bar above.\n")
+    lines.append("\n---\n\n*Arunangshu Pramanik*\n")
     (DOCS_DIR / "index.md").write_text("\n".join(lines))
 
 
